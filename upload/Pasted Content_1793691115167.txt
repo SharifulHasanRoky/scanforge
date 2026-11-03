@@ -1,0 +1,1959 @@
+# PROJECT: BUILD THE WORLD'S BEST FREE QR CODE & BARCODE WORKSPACE
+
+## 1. YOUR ROLE AND MISSION
+
+Act as an elite product development team consisting of:
+
+- Senior Product Strategist
+- Principal Full-Stack Engineer
+- QR Code Technology Specialist
+- Barcode Technology Specialist
+- UI/UX Designer
+- Technical SEO Architect
+- Growth Marketing Strategist
+- Performance Engineer
+- Security and Privacy Specialist
+- Database Architect
+- Quality Assurance Engineer
+
+Your mission is to transform the existing project into a world-class global QR Code and Barcode Generator platform.
+
+The platform must compete with established products such as:
+
+- QRCode Monkey
+- QR Code Generator
+- QR TIGER
+- QRCodeChimp
+- QRStuff
+- GoQR
+- Adobe Express
+- Canva
+- Google QR Code Generator
+- Other online barcode generator platforms
+
+This is not a basic QR generator.
+
+This is not just a URL-to-QR converter.
+
+This is not just a barcode maker.
+
+Build a complete browser-first QR Code and Barcode Workspace where users can create, customise, generate, validate, download, print, save, organise and manage QR codes and barcodes.
+
+The platform should serve:
+
+- Individuals
+- Businesses
+- Ecommerce sellers
+- Retailers
+- Marketers
+- Developers
+- Designers
+- Restaurants
+- Educational institutions
+- Event organisers
+- Manufacturers
+- Product companies
+- Logistics businesses
+- Agencies
+- Global organisations
+
+**Primary objective:**
+
+Build one website that combines comprehensive QR Code and Barcode generation functionality into a single free platform.
+
+Focus on genuine functionality, accuracy, scan reliability, speed, usability, privacy, accessibility, mobile experience and organic search growth.
+
+First inspect the existing project. Preserve working functionality and improve the existing architecture wherever practical.
+
+---
+
+# 2. ABSOLUTE BUSINESS MODEL
+
+## 100% FREE FOREVER
+
+This is a permanent business requirement.
+
+The primary monetisation source will be Google AdSense.
+
+There will NEVER be:
+
+- Premium plans.
+- Paid plans.
+- Subscription plans.
+- Paywalls.
+- Paid feature unlocks.
+- Paid downloads.
+- Credits systems.
+- Token systems.
+- Forced upgrades.
+- Mandatory registration for core generation.
+- Forced watermarks.
+- Artificial daily generation quotas.
+- Paid QR code generation.
+- Paid barcode generation.
+
+Every core static QR and barcode generation tool must remain free.
+
+Do not build subscription infrastructure, payment systems, billing systems or premium upgrade flows.
+
+Do not introduce premium plans as a solution to infrastructure costs.
+
+Our business model:
+
+**Free QR & Barcode Tools + Global Organic Traffic + Google AdSense Revenue.**
+
+Reasonable technical restrictions may exist for extremely large batches, browser memory, file size or malicious automated activity.
+
+These restrictions must be transparent and technically justified.
+
+Never introduce arbitrary daily generation limits for legitimate users.
+
+---
+
+# 3. BRAND POSITIONING
+
+## Primary brand positioning
+
+**THE WORLD'S FREE QR CODE & BARCODE WORKSPACE.**
+
+## Main headline
+
+**CREATE QR CODES AND BARCODES. FREE. IN SECONDS.**
+
+## Supporting tagline
+
+Scan. Connect. Create.
+
+## Brand promise
+
+Create, customise, generate, download, print and manage QR codes and barcodes without unnecessary restrictions.
+
+## Brand principles
+
+1. Completely free core functionality.
+2. No mandatory signup for generation.
+3. No forced watermark.
+4. No artificial daily generation quotas.
+5. Browser-first processing.
+6. Privacy-conscious architecture.
+7. Fast generation.
+8. Reliable QR scanning.
+9. Accurate barcode output.
+10. Bulk processing.
+11. Excellent mobile experience.
+12. Optional user accounts.
+13. Personal QR and barcode management.
+14. Global SEO accessibility.
+
+Create an original, recognisable global brand.
+
+Do not copy competitor logos, visual identity, proprietary assets or interfaces.
+
+---
+
+# 4. COMPLETE PRODUCT ECOSYSTEM
+
+The platform must contain two major product ecosystems:
+
+1. QR Code Generator.
+2. Barcode Generator.
+
+Both must be accessible from one website, one navigation system and one consistent product experience.
+
+## A. QR CODE GENERATOR
+
+Build a comprehensive QR code generation system.
+
+### URL and Website QR
+
+- Website URL QR.
+- Landing page QR.
+- Link-to-QR generator.
+- URL-to-QR converter.
+- Short-link QR where supported.
+- Multiple URL QR generation.
+
+### Text QR
+
+- Plain text QR.
+- Notes QR.
+- Instructions QR.
+- Message QR.
+- Custom text QR.
+
+### Contact QR
+
+- vCard QR.
+- Name and contact details.
+- Phone number QR.
+- Email QR.
+- Business contact QR.
+- Address QR.
+
+### Communication QR
+
+- WhatsApp QR.
+- Email QR.
+- Phone call QR.
+- SMS QR.
+- Contact sharing QR.
+
+### Wi-Fi QR
+
+- Wi-Fi network QR.
+- SSID.
+- Password.
+- Network security type.
+- Hidden network support where technically supported.
+
+### Social Media QR
+
+- Facebook.
+- Instagram.
+- YouTube.
+- TikTok.
+- LinkedIn.
+- X.
+- Other supported social profile links.
+
+### Location QR
+
+- Google Maps link QR.
+- Coordinates.
+- Address QR.
+- Map destination QR.
+
+### File QR
+
+- PDF QR.
+- Image QR.
+- Document QR.
+- Other hosted file links.
+
+Important: A static QR code can encode a URL to a hosted file. It does not automatically upload, store or host the file itself.
+
+### Payment QR
+
+Support appropriate payment URI formats where technically and geographically applicable.
+
+Do not claim payment-provider compatibility without testing.
+
+### Event QR
+
+- Calendar event QR.
+- Event title.
+- Date.
+- Time.
+- Location.
+- Description.
+
+### App QR
+
+- Google Play link.
+- Apple App Store link.
+- Application download links.
+
+### Advanced QR
+
+- GS1 Digital Link where supported.
+- Other validated QR data formats.
+
+---
+
+# 5. CUSTOM QR CODE DESIGNER
+
+Build a professional QR code design workspace.
+
+Required functionality:
+
+- Custom foreground colour.
+- Custom background colour.
+- Gradient colours.
+- Dot patterns.
+- Module shapes.
+- Custom corner shapes.
+- Custom eye shapes.
+- Logo upload.
+- Logo positioning.
+- Logo size adjustment.
+- Logo background.
+- Frames.
+- Call-to-action labels.
+- Custom margins.
+- Quiet-zone controls.
+- Error-correction settings.
+- Live preview.
+- Reset design.
+- Preview export.
+- High-resolution output.
+
+### Advanced design features
+
+- Circular-inspired QR styles.
+- Rounded QR patterns.
+- Modern dot QR designs.
+- Brand-colour QR templates.
+- Business QR templates.
+- Restaurant QR templates.
+- Event QR templates.
+- Social media QR templates.
+- Ecommerce QR templates.
+
+### Scan reliability
+
+Custom styling must never compromise QR reliability.
+
+Implement:
+
+- Contrast validation.
+- Quiet-zone validation.
+- Logo-size safeguards.
+- Error-correction recommendations.
+- QR decoding or scan verification.
+- Warnings when a design may be difficult to scan.
+
+Do not claim a QR code has passed validation unless an actual decoding or scanning test has succeeded.
+
+Support:
+
+- PNG.
+- SVG.
+- PDF.
+
+Provide high-resolution and print-ready export.
+
+---
+
+# 6. STATIC AND DYNAMIC QR CODE SYSTEM
+
+Static and dynamic QR codes must be treated as separate technologies.
+
+## A. STATIC QR CODES
+
+Static QR generation is the primary launch feature.
+
+Requirements:
+
+- Encode actual destination or data directly.
+- No redirect server required.
+- No database required.
+- No account required.
+- No watermark.
+- No platform-imposed expiry.
+- No scan quota.
+- No artificial daily generation limit.
+- Browser-side generation wherever practical.
+
+Explain that the QR image itself does not expire because of our platform, but its destination or external content may become unavailable.
+
+Static QR destinations cannot be edited after generation.
+
+## B. DYNAMIC QR CODES
+
+Dynamic QR is an advanced feature requiring additional infrastructure.
+
+Potential functionality:
+
+- Editable destination.
+- Redirect management.
+- Scan counting.
+- Scan analytics.
+- Device information where legally appropriate.
+- Geographic analytics at an appropriate privacy level.
+- Campaign management.
+- QR code management dashboard.
+
+Dynamic QR requires:
+
+- Backend redirect service.
+- Database.
+- Secure redirect validation.
+- Abuse protection.
+- Analytics event storage.
+- Monitoring.
+- Long-term service reliability.
+
+Do not pretend a static QR code is dynamic.
+
+Do not depend on an external redirect service without disclosing that dependency.
+
+Dynamic QR must not be launched until the backend can reliably maintain the redirect URLs.
+
+Static QR generation must remain free even if dynamic QR infrastructure is introduced.
+
+---
+
+# 7. BARCODE GENERATOR
+
+Build a comprehensive barcode generation workspace.
+
+## A. Retail Barcode Formats
+
+- EAN-13.
+- EAN-8.
+- UPC-A.
+- UPC-E.
+
+## B. General-Purpose Barcode Formats
+
+- Code 128.
+- Code 39.
+- Code 93.
+- Codabar.
+- Interleaved 2 of 5.
+
+## C. Industrial and Shipping Formats
+
+- ITF-14.
+- GS1-128.
+- GS1 DataBar where supported.
+
+## D. Two-Dimensional Codes
+
+- Data Matrix.
+- PDF417.
+- Aztec.
+- QR Code.
+
+Use maintained libraries and validate their commercial licensing.
+
+## E. Barcode Customisation
+
+- Barcode width.
+- Barcode height.
+- Margin.
+- Foreground colour.
+- Background colour.
+- Human-readable text.
+- Font and label positioning where supported.
+- Display or hide checksum.
+- Print preview.
+- Output dimensions.
+- Resolution.
+- Export format.
+
+## F. Barcode Validation
+
+Implement format-specific validation.
+
+Requirements:
+
+- Validate accepted characters.
+- Validate data length.
+- Calculate check digits where applicable.
+- Display understandable error messages.
+- Prevent invalid barcode output.
+- Explain format-specific restrictions.
+
+Important:
+
+Generating a barcode image does not issue a legitimate GS1-issued GTIN, UPC or EAN identifier.
+
+Users must provide identifiers they are authorised to use.
+
+Never claim that a randomly generated number is a registered or officially issued retail product identifier.
+
+---
+
+# 8. BULK QR CODE AND BARCODE GENERATOR
+
+Bulk generation is a major competitive advantage.
+
+Implement:
+
+- Multiple QR generation.
+- Multiple barcode generation.
+- CSV import.
+- Supported spreadsheet import.
+- Paste multiple rows.
+- One record per line.
+- Column mapping.
+- Batch preview.
+- Invalid-row detection.
+- Error reporting.
+- Sequential number generation where appropriate.
+- Prefix and suffix options.
+- Custom filenames.
+- Batch PNG export.
+- Batch SVG export.
+- Batch PDF export.
+- ZIP download.
+- CSV mapping export.
+- Print-ready label sheets.
+
+Allow users to generate hundreds or thousands of codes where browser and device resources permit.
+
+Use efficient local processing.
+
+Do not upload CSV data unnecessarily.
+
+Provide progress indicators.
+
+Allow safe cancellation.
+
+Do not lose completed results because one record is invalid.
+
+---
+
+# 9. PRINTING AND EXPORT SYSTEM
+
+Build a reliable export and printing system.
+
+Supported formats:
+
+- PNG.
+- SVG.
+- PDF.
+- ZIP for batch generation.
+
+Requirements:
+
+- High-resolution output.
+- Vector export where appropriate.
+- Print-ready dimensions.
+- Custom margins.
+- A4 label-sheet layouts.
+- Multiple codes per page.
+- Spacing and alignment.
+- Cut marks where useful.
+- Human-readable labels.
+- Preview before printing.
+- Consistent export dimensions.
+
+Do not stretch or distort barcode proportions.
+
+Ensure barcode dimensions and QR quiet zones remain valid.
+
+---
+
+# 10. USER REGISTRATION AND GUEST EXPERIENCE
+
+This is an important product requirement.
+
+The platform must provide the same optional registration experience as the PDF Editor project.
+
+Account creation is intended for saving, organising and managing generated codes.
+
+It must never restrict free generation.
+
+## A. FIRST THREE GENERATIONS WITHOUT SIGNUP
+
+Every visitor can generate their first three successful QR codes or barcodes without creating an account.
+
+Requirements:
+
+- First 3 successful generation operations require no signup.
+- QR and barcode generations share the same counter.
+- Count only successfully completed generation operations.
+- Failed operations must not count.
+- Cancelled operations must not count.
+- Reopening an existing code must not count.
+- Previewing an existing code must not count.
+- Downloading an existing code must not count.
+- Persist the counter across page refreshes and browser navigation.
+- Do not reset the counter daily.
+
+The counter must be implemented reliably without unnecessary tracking.
+
+## B. OPTIONAL SIGNUP POPUP AFTER THE THIRD GENERATION
+
+Immediately after the third successful QR or barcode generation, show a friendly, dismissible account creation popup.
+
+### Popup headline
+
+**Save Your Codes. Access Them Anytime!**
+
+### Popup description
+
+You've successfully generated 3 codes. Create your free account to save, organise and access your QR codes and barcodes anytime.
+
+### Benefits
+
+- Save generated QR codes.
+- Save generated barcodes.
+- Store custom QR designs and logo settings.
+- Organise codes into folders or projects.
+- Access saved codes from your account.
+- Manage generated codes in one place.
+
+### Primary CTA
+
+Create Free Account
+
+### Secondary CTA
+
+Continue Without Account
+
+### Additional message
+
+No OTP. No email verification. No phone verification. Creating an account is completely optional.
+
+## C. NEVER BLOCK GENERATION
+
+This is non-negotiable.
+
+- The third-generation popup must never act as a paywall.
+- Users can dismiss the popup.
+- Users can continue generating unlimited QR codes and barcodes every day without an account.
+- No daily generation quotas.
+- No monthly generation quotas.
+- No generation credits.
+- No tokens.
+- No forced registration.
+- No paid downloads.
+- No forced watermarks.
+- Never disable generation because the user has not registered.
+- Never require registration to download a generated code.
+- If the popup is dismissed, do not show it repeatedly after every subsequent generation.
+- Persist the popup dismissal preference locally.
+- Provide a visible but unobtrusive way to create an account later.
+
+The three-generation trigger is only an invitation to create an account for saving and managing codes.
+
+It is not a usage limit.
+
+## D. REGISTRATION FORM
+
+Required fields:
+
+1. Full Name.
+2. Email Address.
+3. Phone Number.
+4. Password.
+
+Requirements:
+
+- Ask users to provide genuine and accurate information.
+- Validate name.
+- Validate email format.
+- Validate phone number format.
+- Validate password requirements.
+- No OTP verification.
+- No email verification.
+- No phone verification.
+- No mandatory verification links.
+- Never describe email addresses or phone numbers as verified.
+- Use secure password hashing and established authentication practices.
+- Protect user information.
+- Clearly explain data usage.
+
+If Supabase Auth is used, configure it appropriately for the no-verification requirement where supported. Do not create a fake verification state.
+
+## E. REGISTRATION SUCCESS
+
+After successful registration:
+
+- Redirect the user to their personal dashboard.
+- Show a welcome message.
+- Provide an option to save existing guest-session codes.
+- Ask for explicit consent before uploading or transferring guest files.
+- Never automatically upload temporary guest files without permission.
+- Allow immediate access to all generator tools.
+- Do not introduce any account-based generation restrictions.
+
+---
+
+# 11. USER PROFILE AND PERSONAL DASHBOARD
+
+Build a complete, professional and responsive user dashboard.
+
+## A. Dashboard Overview
+
+Display:
+
+- Welcome message.
+- Profile information.
+- Total saved QR codes.
+- Total saved barcodes.
+- Recently generated items.
+- Recently saved designs.
+- Recent projects.
+- Quick generation shortcuts.
+
+Do not show misleading generation statistics if the data has not been collected.
+
+## B. Dashboard Navigation
+
+Create the following sections:
+
+- Overview.
+- My QR Codes.
+- My Barcodes.
+- Saved Designs.
+- Custom QR Templates.
+- Bulk Generation History.
+- My Projects.
+- Folders and Collections.
+- Recently Generated.
+- Account Settings.
+- Profile Information.
+
+## C. My QR Codes
+
+Users can:
+
+- Save generated QR codes.
+- Rename QR codes.
+- Preview QR codes.
+- Download saved QR codes.
+- Delete QR codes.
+- Duplicate QR codes.
+- Organise QR codes into folders.
+- Search QR codes.
+- Reuse existing designs.
+- Edit design settings.
+- View QR type.
+- View creation date.
+
+## D. My Barcodes
+
+Users can:
+
+- Save generated barcodes.
+- Rename barcodes.
+- Preview barcodes.
+- Download barcodes.
+- Delete barcodes.
+- Duplicate barcodes.
+- Organise barcodes into folders.
+- Search barcodes.
+- Reuse previous barcode settings.
+- View barcode format.
+- View creation date.
+
+## E. Saved Designs
+
+Allow users to save and reuse:
+
+- QR colour combinations.
+- Logo configurations.
+- QR patterns.
+- Frames.
+- Custom templates.
+- Export preferences.
+- Barcode styles.
+
+## F. My Projects
+
+Allow users to organise generated codes by project.
+
+Examples:
+
+- Restaurant Campaign.
+- Product Packaging.
+- Business Cards.
+- Marketing Campaign.
+- Event Management.
+- Ecommerce Products.
+- Inventory.
+- Retail Labels.
+- Customer Support.
+- Social Media Campaign.
+
+Users can create, rename, search and delete projects.
+
+## G. Account Settings
+
+Include:
+
+- Edit Full Name.
+- Edit Email Address.
+- Edit Phone Number.
+- Change Password.
+- Profile Information.
+- Delete Account.
+- Privacy Information.
+- Saved Document Management.
+
+If an email or phone number is changed, do not falsely mark it as verified.
+
+---
+
+# 12. SAVED QR AND BARCODE DATA
+
+For saved QR codes, store where applicable:
+
+- QR ID.
+- User ID.
+- QR name.
+- QR type.
+- Encoded content or destination.
+- Design settings.
+- Logo configuration.
+- Export format.
+- Creation date.
+- Updated date.
+- Project ID.
+- Folder ID.
+
+For saved barcodes, store where applicable:
+
+- Barcode ID.
+- User ID.
+- Barcode name.
+- Barcode format.
+- Encoded value.
+- Customisation settings.
+- Human-readable text settings.
+- Export format.
+- Creation date.
+- Updated date.
+- Project ID.
+- Folder ID.
+
+Do not store unnecessary personal information.
+
+Avoid storing generated files when the output can be reliably regenerated from saved data and settings.
+
+If logo or other assets must be saved, use secure private storage.
+
+---
+
+# 13. DATABASE AND STORAGE ARCHITECTURE
+
+Guest generation must not require a database.
+
+Static QR generation must not require a database.
+
+Static barcode generation must not require a database.
+
+Bulk generation should work locally whenever practical.
+
+Registered users need secure database records for:
+
+- User profiles.
+- Saved QR codes.
+- Saved barcodes.
+- Projects.
+- Folders.
+- Saved design presets.
+- Dynamic QR records if implemented.
+- Analytics if implemented.
+
+Use Supabase Database, Authentication and Storage if compatible with the existing architecture.
+
+Suggested logical data structure:
+
+### profiles
+
+- id
+- full_name
+- email
+- phone
+- created_at
+- updated_at
+
+### qr_codes
+
+- id
+- user_id
+- name
+- qr_type
+- encoded_content
+- design_settings
+- project_id
+- created_at
+- updated_at
+
+### barcodes
+
+- id
+- user_id
+- name
+- barcode_type
+- encoded_value
+- design_settings
+- project_id
+- created_at
+- updated_at
+
+### projects
+
+- id
+- user_id
+- name
+- description
+- created_at
+
+### folders
+
+- id
+- user_id
+- name
+- project_id
+- created_at
+
+### saved_assets
+
+- id
+- user_id
+- file_path
+- file_type
+- created_at
+
+Use appropriate relationships and indexes.
+
+Security requirements:
+
+- Row Level Security.
+- Private storage buckets.
+- Users can only access their own records.
+- Secure authentication.
+- No public exposure of private files.
+- Secure signed URLs where needed.
+- Account deletion support.
+- Data deletion support.
+
+Do not store passwords manually if Supabase Auth is managing authentication.
+
+Do not promise unlimited cloud storage unless the infrastructure genuinely supports it.
+
+If account storage reaches its available limit, users must still be able to generate and download QR codes and barcodes. Only account-based saving may be affected, with a clear explanation.
+
+---
+
+# 14. DYNAMIC QR DASHBOARD INTEGRATION
+
+If dynamic QR functionality is implemented, registered users should be able to:
+
+- Create dynamic QR projects.
+- Edit destination URLs.
+- Manage active QR campaigns.
+- View scan analytics.
+- Organise campaigns.
+- Update destination information.
+- Rename campaigns.
+- Archive campaigns.
+- Delete campaigns.
+
+Clearly distinguish static and dynamic QR codes.
+
+Do not make static QR generation dependent on an account or database.
+
+Do not promise permanent dynamic QR availability without maintaining the redirect infrastructure.
+
+---
+
+# 15. UI/UX AND PRODUCT DESIGN
+
+Create a modern, clean, professional and globally accessible interface.
+
+Avoid unnecessary complexity.
+
+## Homepage
+
+Include:
+
+- Brand logo.
+- Navigation.
+- Strong product headline.
+- Short explanation.
+- QR Code Generator entry point.
+- Barcode Generator entry point.
+- Searchable tool directory.
+- Popular QR tools.
+- Popular barcode tools.
+- Custom QR designer.
+- Bulk generation entry point.
+- User account entry point.
+- Privacy explanation.
+- Product advantages.
+- Competitor comparison.
+- FAQ section.
+- Helpful SEO content.
+
+### Suggested homepage H1
+
+Free QR Code & Barcode Generator Online
+
+### Suggested subheadline
+
+Create custom QR codes and barcodes in seconds. Add your logo, customise designs, generate in bulk and download for free.
+
+## QR Generator Workspace
+
+Recommended layout:
+
+LEFT:
+- QR type selection.
+- Content input.
+- Tool-specific settings.
+
+CENTRE:
+- Live QR preview.
+- Scan preview.
+- Design preview.
+
+RIGHT:
+- Colour controls.
+- Logo settings.
+- Pattern settings.
+- Frame settings.
+- Export options.
+
+BOTTOM:
+- Download.
+- Reset.
+- Print.
+- Validation status.
+
+## Barcode Workspace
+
+Include:
+
+- Barcode format selector.
+- Input field.
+- Validation.
+- Barcode preview.
+- Dimensions.
+- Customisation.
+- Human-readable label.
+- Export.
+- Print.
+
+## User Dashboard
+
+Use a clean dashboard layout with:
+
+- Sidebar navigation.
+- Overview cards.
+- Search.
+- Filters.
+- QR and barcode lists.
+- Project organisation.
+- Profile settings.
+
+## Mobile-first experience
+
+Do not simply shrink the desktop layout.
+
+Create a dedicated responsive interface.
+
+Include:
+
+- Touch-friendly controls.
+- Mobile QR preview.
+- Easy logo upload.
+- Responsive barcode settings.
+- Mobile download.
+- Camera scanning or testing where supported.
+- Bulk processing controls.
+- Mobile dashboard.
+- Print-friendly layout.
+
+---
+
+# 16. BRAND AND VISUAL IDENTITY
+
+Create a distinctive global brand.
+
+Design:
+
+- Logo.
+- Brand colours.
+- Typography.
+- Icon system.
+- Design tokens.
+- Component library.
+- Navigation.
+- Buttons.
+- Forms.
+- QR workspace.
+- Barcode workspace.
+- Dashboard.
+- Tool cards.
+- Responsive layouts.
+
+The visual experience should feel:
+
+- Modern.
+- Minimal.
+- Professional.
+- Trustworthy.
+- Fast.
+- Accessible.
+- Globally understandable.
+
+Do not imitate competitor interfaces.
+
+---
+
+# 17. COMPLETE SEO STRATEGY
+
+SEO is one of the primary acquisition channels.
+
+The platform must be built to acquire global organic traffic.
+
+Use the keyword list below as the initial keyword universe.
+
+Do not fabricate search volume, CPC, keyword difficulty or traffic estimates.
+
+Map keywords according to actual search intent.
+
+## A. CORE QR CODE KEYWORDS
+
+- qr code generator
+- free qr code generator
+- qr code generator online
+- create qr code
+- qr code maker
+- free qr code
+- create qr code free
+- qrcode generator
+- link to qr code
+- custom qr code
+- qr maker
+- create a qr code for a url
+- qr code generator with logo
+- qr generator free
+- best qr code generator
+- qr creator
+- url to qr code
+- qr code generator free online
+- best free qr code generator
+- qr code with logo
+- qr code for website
+- custom qr code generator
+- create qr code for website
+- turn link into qr code
+- create your own qr code
+- get a qr code
+- generate qr
+- qr code builder
+- qr creator free
+- qr maker free
+- make qr code online
+- scan code generator
+- make a scan code
+- qr gen
+- getting a qr code
+- qr maker online
+- make custom qr code
+- qr builder
+- make qr
+- qr code create free
+- free qr code builder
+- create qr code online
+- circle qr code generator
+
+## B. URL AND WEBSITE QR KEYWORDS
+
+- link to qr code
+- create a qr code for a url
+- url to qr code
+- qr code for website
+- create qr code for website
+- turn link into qr code
+- link to qr
+- create qr code online
+
+## C. CUSTOM QR KEYWORDS
+
+- custom qr code
+- custom qr code generator
+- qr code generator with logo
+- qr code with logo
+- make custom qr code
+- circle qr code generator
+
+## D. PDF QR KEYWORD
+
+- pdf to qr code
+
+## E. BULK QR KEYWORD
+
+- bulk qr code generator
+
+## F. BARCODE KEYWORDS
+
+- barcode generator
+- barcode maker
+- create barcode
+- free barcode generator
+- online barcode generator
+- barcode maker online
+- qr barcode generator
+- link to barcode
+- generate bar code
+- free online barcode generator
+- bulk barcode generator
+- upc barcode generator
+- 2d code generator
+
+Additional related keyword targets:
+
+- free barcode maker.
+- EAN barcode generator.
+- UPC barcode generator.
+- Code 128 barcode generator.
+- Code 39 barcode generator.
+- barcode generator online.
+- bulk barcode maker.
+
+## G. COMPETITOR KEYWORDS
+
+Target relevant comparison and alternative-seeking search intent for:
+
+- qr code monkey
+- qr monkey
+- adobe qr code generator
+- free qr code generator google
+- qr code generator google
+- adobe express qr code generator
+- canva qr code generator
+- qr code monkey alternative
+- qr monkey alternative
+- adobe qr code generator alternative
+- canva qr code generator alternative
+- google qr code generator alternative
+- QR TIGER alternative
+- QRStuff alternative
+- GoQR alternative
+- QR Code Generator alternative
+- barcode generator alternative
+
+Create dedicated competitor comparison pages only when meaningful content and a real user benefit exist.
+
+Never impersonate a competitor.
+
+Never imply official affiliation.
+
+Never copy competitor branding, proprietary content or interface.
+
+Comparison pages must be factual, honest and independently presented.
+
+## H. SEO URL ARCHITECTURE
+
+Create the following landing pages when the corresponding functionality is implemented:
+
+/
+ /qr-code-generator
+ /free-qr-code-generator
+ /qr-code-maker
+ /url-to-qr-code
+ /website-qr-code
+ /custom-qr-code-generator
+ /qr-code-with-logo
+ /bulk-qr-code-generator
+ /pdf-to-qr-code
+ /wifi-qr-code-generator
+ /vcard-qr-code-generator
+ /whatsapp-qr-code-generator
+ /email-qr-code-generator
+ /phone-qr-code-generator
+ /location-qr-code-generator
+ /social-media-qr-code-generator
+ /event-qr-code-generator
+ /payment-qr-code-generator
+ /barcode-generator
+ /free-barcode-generator
+ /upc-barcode-generator
+ /ean-barcode-generator
+ /code-128-barcode-generator
+ /code-39-barcode-generator
+ /itf-14-barcode-generator
+ /gs1-barcode-generator
+ /datamatrix-generator
+ /pdf417-generator
+ /aztec-code-generator
+ /bulk-barcode-generator
+ /qr-code-monkey-alternative
+ /adobe-qr-code-generator-alternative
+ /canva-qr-code-generator-alternative
+ /google-qr-code-generator-alternative
+ /qr-tiger-alternative
+ /qrstuff-alternative
+ /goqr-alternative
+
+Each page must target a distinct search intent.
+
+Do not create duplicate, thin or doorway pages.
+
+## I. ON-PAGE SEO
+
+Every landing page must include:
+
+- Unique SEO title.
+- Unique meta description.
+- One clear H1.
+- Logical H2 and H3 hierarchy.
+- Primary keyword.
+- Supporting keywords.
+- Helpful original content.
+- Working generator functionality.
+- Step-by-step instructions.
+- Relevant FAQs.
+- Internal links.
+- Appropriate structured data.
+- Canonical URL.
+- Mobile optimisation.
+
+## J. TECHNICAL SEO
+
+Implement:
+
+- XML sitemap.
+- Robots.txt.
+- Canonical tags.
+- Indexability controls.
+- Structured data where eligible.
+- Breadcrumbs.
+- Internal linking.
+- Open Graph.
+- Mobile optimisation.
+- Core Web Vitals.
+- Image optimisation.
+- Crawlability.
+- JavaScript rendering considerations.
+- Duplicate content prevention.
+- Redirect management.
+- 404 handling.
+
+Do not index private user dashboards, generated personal codes or temporary previews.
+
+Do not create indexable URLs for every user-generated QR code or barcode.
+
+---
+
+# 18. AEO AND GEO STRATEGY
+
+Make the platform understandable to search engines and AI answer systems.
+
+Implement:
+
+- Clear QR tool explanations.
+- Clear barcode format explanations.
+- Accurate usage instructions.
+- Step-by-step tutorials.
+- Helpful FAQs.
+- Format compatibility documentation.
+- Barcode validation explanations.
+- Static versus dynamic QR explanations.
+- Privacy information.
+- Original educational resources.
+- Appropriate structured data.
+- Consistent product descriptions.
+
+Create useful content around:
+
+- How to create a QR code.
+- How to create a QR code for a website.
+- How to add a logo to a QR code.
+- How to generate a barcode.
+- Difference between QR and barcode.
+- Difference between static and dynamic QR.
+- How to print QR codes.
+- How to generate bulk QR codes.
+- How to create UPC and EAN barcodes.
+
+Avoid mass-generated pages without meaningful unique value.
+
+---
+
+# 19. TECHNICAL ARCHITECTURE
+
+First audit the existing project.
+
+Do not rebuild everything blindly.
+
+Inspect:
+
+- Existing framework.
+- Project structure.
+- Routes.
+- Components.
+- Existing libraries.
+- Current generation architecture.
+- APIs.
+- Hosting.
+- Deployment.
+- Database.
+- Authentication.
+- SEO.
+- Performance.
+- Security.
+- Existing functionality.
+
+Preserve working code unless there is a justified reason to change it.
+
+## Architecture principles
+
+- Browser-first generation.
+- Client-side processing.
+- Web Workers for heavy batch operations.
+- Efficient canvas rendering.
+- SVG generation.
+- Local file handling.
+- Local CSV parsing.
+- Browser-side ZIP generation.
+- Responsive rendering.
+- Secure file handling.
+- Minimal backend dependencies.
+
+Evaluate maintained libraries for:
+
+- QR code generation.
+- QR code decoding and validation.
+- Barcode generation.
+- Barcode validation.
+- CSV parsing.
+- Spreadsheet parsing.
+- ZIP creation.
+- PDF export.
+- Image processing.
+
+Evaluate library licensing before commercial deployment.
+
+Do not assume one library supports every QR or barcode format.
+
+Select technologies based on accuracy, performance, compatibility, maintenance and licensing.
+
+## Database separation
+
+Static QR generation must not require a database.
+
+Static barcode generation must not require a database.
+
+Bulk generation should work locally whenever practical.
+
+User profiles and saved codes require database functionality.
+
+Dynamic QR requires backend infrastructure.
+
+Do not introduce unnecessary database or storage costs for the core product.
+
+---
+
+# 20. PERFORMANCE REQUIREMENTS
+
+Performance must be a competitive advantage.
+
+Implement:
+
+- Fast initial page load.
+- Minimal JavaScript bundle.
+- Lazy-loaded tools.
+- Efficient SVG and canvas rendering.
+- Web Workers for large batch jobs.
+- Responsive preview.
+- Fast downloads.
+- Progress indicators.
+- Cancellation.
+- Error recovery.
+- Mobile optimisation.
+
+Test:
+
+- Simple URL QR.
+- Long URL QR.
+- Large text QR.
+- Logo QR.
+- Gradient QR.
+- High-density QR.
+- Wi-Fi QR.
+- vCard QR.
+- EAN-13.
+- EAN-8.
+- UPC-A.
+- UPC-E.
+- Code 128.
+- Code 39.
+- Data Matrix.
+- PDF417.
+- Bulk CSV generation.
+- Large batch exports.
+
+Do not claim a code is scannable unless it has passed a suitable validation test.
+
+---
+
+# 21. SECURITY AND PRIVACY
+
+Treat user input and uploaded assets carefully.
+
+Implement:
+
+- Input validation.
+- File type verification.
+- Safe image processing.
+- Secure file handling.
+- No unnecessary uploads.
+- No public exposure of user files.
+- Safe export.
+- Abuse prevention.
+- Rate limiting against malicious automation.
+- Privacy policy.
+- Transparent data handling.
+
+For static QR and barcode generation, process data locally whenever practical.
+
+For dynamic QR redirects:
+
+- Validate destination URLs.
+- Prevent open-redirect abuse.
+- Block malicious destinations where appropriate.
+- Protect redirect endpoints.
+- Monitor abuse.
+- Protect analytics data.
+- Implement appropriate retention controls.
+
+Do not collect unnecessary personal information.
+
+Do not expose uploaded logos or private CSV files publicly.
+
+---
+
+# 22. GOOGLE ADSENSE MONETIZATION
+
+Google AdSense is the primary intended revenue source.
+
+There will be no subscription revenue.
+
+Place advertisements carefully across:
+
+- Homepage.
+- QR generator landing pages.
+- Barcode generator landing pages.
+- Tutorials.
+- Educational pages.
+- Comparison pages.
+- Other suitable content pages.
+
+For generator workspaces, prioritise user experience.
+
+Never:
+
+- Place ads beside Generate or Download buttons in a way that causes accidental clicks.
+- Disguise advertisements as navigation.
+- Encourage users to click ads.
+- Generate artificial impressions.
+- Use deceptive placements.
+- Interrupt generation with misleading advertisements.
+- Compromise performance with excessive ads.
+
+Maintain Google AdSense policy compliance.
+
+Track:
+
+- Organic traffic.
+- Country-level traffic.
+- Page RPM.
+- Revenue.
+- Engaged sessions.
+- Tool usage.
+- Returning users.
+- Page performance.
+
+Do not guarantee AdSense approval or assumed revenue.
+
+---
+
+# 23. USER RETENTION
+
+Core static generation must not require accounts.
+
+Build retention through product usefulness.
+
+Implement:
+
+- Recently used tools.
+- Local generation history.
+- Saved design presets.
+- Repeat generation.
+- Custom templates.
+- Bulk workflows.
+- Related tool recommendations.
+- Useful tutorials.
+- Easy navigation.
+- Reliable exports.
+
+Optional accounts should help users save and manage generated codes.
+
+Do not require registration simply to generate or download a static QR code or barcode.
+
+---
+
+# 24. QUALITY ASSURANCE
+
+Every generator must produce valid output.
+
+## QR validation
+
+Test:
+
+- Correct encoded content.
+- QR decoding.
+- Error-correction levels.
+- Logo compatibility.
+- Contrast.
+- Quiet zone.
+- Print size.
+- High-resolution export.
+- Mobile scanning.
+- Multiple scanning applications.
+
+## Barcode validation
+
+Test:
+
+- Correct symbology.
+- Valid input.
+- Correct checksum.
+- Correct encoded content.
+- Correct dimensions.
+- Human-readable text.
+- Print output.
+- Scanner compatibility.
+
+## Bulk testing
+
+Test:
+
+- CSV import.
+- Spreadsheet import.
+- Invalid records.
+- Duplicate records.
+- Large batches.
+- ZIP output.
+- Filename mapping.
+- Cancellation.
+- Error recovery.
+
+## Account testing
+
+Test:
+
+- Registration.
+- Login.
+- Logout.
+- Profile editing.
+- Saved QR codes.
+- Saved barcodes.
+- Projects.
+- Folders.
+- Search.
+- Rename.
+- Delete.
+- Account deletion.
+- RLS isolation.
+- Guest-to-account save consent.
+- Counter persistence.
+- Popup dismissal persistence.
+
+## General testing
+
+Test:
+
+- Desktop.
+- Mobile.
+- Browser compatibility.
+- Download reliability.
+- Performance.
+- Accessibility.
+- Privacy.
+- Security.
+
+A generator is not complete because its button works.
+
+It is complete when it creates a valid, usable, correctly encoded and downloadable code.
+
+---
+
+# 25. DEVELOPMENT EXECUTION ROADMAP
+
+Execute the project in the following order.
+
+## PHASE 1: EXISTING PROJECT AUDIT
+
+- Inspect the complete codebase.
+- Identify existing features.
+- Identify incomplete features.
+- Review architecture.
+- Review design and UX.
+- Review existing account system.
+- Identify SEO gaps.
+- Identify technical risks.
+- Produce an audit report.
+
+Do not modify working functionality before completing the audit.
+
+## PHASE 2: COMPETITOR RESEARCH
+
+Benchmark:
+
+- QRCode Monkey.
+- QR Code Generator.
+- Adobe Express.
+- Canva.
+- QR TIGER.
+- QRStuff.
+- GoQR.
+- QRCodeChimp.
+- Leading online barcode generators.
+
+Research:
+
+- Free features.
+- QR types.
+- Customisation.
+- Logo support.
+- Export formats.
+- Signup requirements.
+- Dynamic QR conditions.
+- Scan analytics.
+- Barcode symbologies.
+- Bulk generation.
+- Print support.
+- Mobile experience.
+
+Verify current competitor features before publishing comparisons.
+
+Produce a competitor comparison matrix.
+
+## PHASE 3: PRODUCT ARCHITECTURE
+
+Create:
+
+- Product navigation.
+- QR tool categories.
+- Barcode tool categories.
+- QR generator architecture.
+- Barcode generator architecture.
+- Bulk processing architecture.
+- Export architecture.
+- User account architecture.
+- Dashboard architecture.
+- Database architecture.
+- SEO route structure.
+- Security architecture.
+- AdSense strategy.
+
+## PHASE 4: CORE GENERATOR DEVELOPMENT
+
+Build:
+
+- URL QR.
+- Text QR.
+- Contact QR.
+- Wi-Fi QR.
+- Email QR.
+- Phone QR.
+- SMS QR.
+- WhatsApp QR.
+- Social QR.
+- Location QR.
+- File-link QR.
+- Event QR.
+- App QR.
+- Common barcode formats.
+
+## PHASE 5: DESIGN AND EXPORT
+
+Build:
+
+- QR customisation.
+- Logo upload.
+- Pattern controls.
+- Colour controls.
+- Live preview.
+- PNG export.
+- SVG export.
+- PDF export.
+- Print functionality.
+
+## PHASE 6: BULK GENERATION
+
+Build:
+
+- CSV import.
+- Spreadsheet import.
+- Multi-record generation.
+- Batch validation.
+- ZIP export.
+- Print-ready labels.
+
+## PHASE 7: USER PROFILE AND DASHBOARD
+
+Build:
+
+- Registration.
+- Login.
+- Profile management.
+- Optional third-generation popup.
+- Saved QR codes.
+- Saved barcodes.
+- Saved designs.
+- Projects.
+- Folders.
+- Dashboard.
+- Account settings.
+- Secure database access.
+
+Do not block generator functionality during account implementation.
+
+## PHASE 8: ADVANCED QR
+
+Build and test:
+
+- Additional QR formats.
+- GS1 Digital Link where supported.
+- Scan validation.
+- Dynamic QR infrastructure when ready.
+- Redirect management.
+- Analytics where implemented.
+
+## PHASE 9: SEO IMPLEMENTATION
+
+Complete:
+
+- Keyword mapping.
+- Landing pages.
+- Internal linking.
+- Technical SEO.
+- Competitor comparison pages.
+- AEO/GEO.
+- Educational content.
+- Sitemap.
+- Search Console readiness.
+
+## PHASE 10: PERFORMANCE AND SECURITY
+
+Run:
+
+- Browser testing.
+- Mobile testing.
+- Bulk testing.
+- QR decoding.
+- Barcode validation.
+- Account security checks.
+- Database access checks.
+- Privacy checks.
+- Core Web Vitals checks.
+
+## PHASE 11: ADSENSE READINESS
+
+Prepare:
+
+- Ad placement.
+- Privacy policy.
+- Terms of service.
+- Contact page.
+- Required disclosures.
+- Cookie and consent requirements where applicable.
+- Analytics.
+- Search Console.
+- AdSense integration when approved.
+
+Do not guarantee approval.
+
+## PHASE 12: LAUNCH READINESS
+
+Complete the final audit.
+
+Verify every advertised feature.
+
+Ensure all generated codes are valid, downloadable and usable.
+
+Verify registration, profile and saved-code functionality.
+
+---
+
+# 26. STRICT DEVELOPMENT RULES
+
+1. Audit before modifying.
+2. Preserve existing working functionality.
+3. No fake buttons.
+4. No placeholder outputs.
+5. No misleading feature claims.
+6. No subscription infrastructure.
+7. No premium plans.
+8. No paywalls.
+9. No artificial daily generation quotas.
+10. No forced watermarks.
+11. No mandatory signup for static generation.
+12. No unnecessary database.
+13. No competitor branding imitation.
+14. No fabricated SEO data.
+15. No thin SEO landing pages.
+16. No deceptive advertisements.
+17. No privacy misrepresentation.
+18. No untested QR output.
+19. No invalid barcode output.
+20. No misleading GS1 or UPC claims.
+21. No false dynamic QR claims.
+22. No unnecessary infrastructure complexity.
+23. No repeated signup popups.
+24. No account-based generation restrictions.
+25. No automatic guest-file upload without consent.
+26. Prioritise scan reliability and data accuracy.
+
+---
+
+# 27. FINAL SUCCESS CRITERIA
+
+The final product should:
+
+- Combine QR and barcode generation in one website.
+- Compete with established QR generators.
+- Support common barcode formats.
+- Offer custom QR designs.
+- Support logo insertion.
+- Support bulk generation.
+- Offer high-quality exports.
+- Support printing and labels.
+- Provide optional user accounts.
+- Provide personal user profiles.
+- Provide a saved QR and barcode dashboard.
+- Support desktop and mobile.
+- Provide unlimited static generation for legitimate users.
+- Require no mandatory signup for core tools.
+- Have no forced watermark.
+- Be browser-first.
+- Protect user data.
+- Acquire global organic traffic.
+- Generate sustainable AdSense revenue.
+
+## FINAL PRODUCT PROMISE
+
+**THE WORLD'S FREE QR CODE & BARCODE WORKSPACE.**
+
+**CREATE QR CODES. GENERATE BARCODES. CUSTOMISE. DOWNLOAD. PRINT. SAVE. MANAGE.**
+
+**FREE FOREVER. NO FORCED WATERMARKS. NO DAILY GENERATION QUOTAS.**
+
+When users compare this platform with QRCode Monkey, Adobe Express, Canva and other QR or barcode generators, they should find practical, measurable reasons to choose our product.
+
+---
+
+# FINAL EXECUTION INSTRUCTION
+
+Do not immediately generate a generic homepage.
+
+First audit the existing project and codebase.
+
+Then produce:
+
+1. Existing project audit.
+2. Competitor gap analysis.
+3. Complete product architecture.
+4. QR generator implementation plan.
+5. Barcode generator implementation plan.
+6. Bulk generation architecture.
+7. User registration and dashboard architecture.
+8. Database and storage architecture.
+9. Technical architecture.
+10. SEO architecture.
+11. UI/UX improvement plan.
+12. AdSense monetisation plan.
+
+After presenting the plan, begin implementation in stages.
+
+Build real, production-quality functionality.
+
+Test every major feature.
+
+Preserve the existing project wherever possible.
+
+Do not stop at attractive screens or documentation.
+
+**BUILD A REAL GLOBAL QR CODE AND BARCODE PLATFORM THAT USERS CAN RELIABLY USE FOR FREE.**

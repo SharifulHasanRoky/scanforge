@@ -1,0 +1,74 @@
+// Prisma schema for ScanForge — users, saved codes, projects and folders.
+// Static QR/barcode generation never touches this database; it only stores
+// what a registered user explicitly saves.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  phone        String?
+  fullName     String
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  codes   SavedCode[]
+  projects Project[]
+  folders  Folder[]
+}
+
+model SavedCode {
+  id           String   @id @default(cuid())
+  userId       String
+  kind         String   // "qr" | "barcode"
+  name         String
+  typeLabel    String
+  content      String
+  design       String   // JSON-encoded design/settings
+  projectId    String?
+  folderId     String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  folder    Folder?  @relation(fields: [folderId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  userId      String
+  name        String
+  description String?
+  createdAt   DateTime @default(now())
+
+  user   User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  codes  SavedCode[]
+  folders Folder[]
+
+  @@index([userId])
+}
+
+model Folder {
+  id        String   @id @default(cuid())
+  userId    String
+  name      String
+  projectId String?
+  createdAt DateTime @default(now())
+
+  user    User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  project Project?    @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  codes   SavedCode[]
+
+  @@index([userId])
+}
