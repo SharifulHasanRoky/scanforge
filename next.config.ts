@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
-  /* config options here */
+  // Vercel manages its own build output — do not use "standalone" there.
+  // The local "build" script handles standalone copying for self-hosting.
   typescript: {
     ignoreBuildErrors: true,
   },
