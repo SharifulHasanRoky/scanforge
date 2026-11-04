@@ -8,8 +8,8 @@ export const BRAND = {
     "Create custom QR codes and barcodes in seconds. Add your logo, customise designs, generate in bulk and download for free — no signup, no watermark, no daily limits.",
   promise:
     "The world's free QR code & barcode workspace. Create, customise, generate, download, print and manage QR codes and barcodes without unnecessary restrictions.",
-  domain: "scanforge.app",
-  url: "https://scanforge.app",
+  domain: "qrandbarcodegenerator.vercel.app",
+  url: "https://qrandbarcodegenerator.vercel.app",
   email: "hello@scanforge.app",
 } as const;
 
