@@ -180,7 +180,7 @@ export function QrWorkspace() {
   return (
     <div className="space-y-6">
       <div className="flex flex-col gap-1">
-        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">QR Code Generator</h1>
+        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">QR Code Generator</h2>
         <p className="text-muted-foreground">12 content types · custom designer · logo · PNG / SVG / PDF · 100% free, no watermark.</p>
       </div>
 

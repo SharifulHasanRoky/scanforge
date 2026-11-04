@@ -187,7 +187,7 @@ export function BarcodeWorkspace() {
   return (
     <div className="space-y-6">
       <div className="flex flex-col gap-1">
-        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Barcode Generator</h1>
+        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Barcode Generator</h2>
         <p className="text-muted-foreground">15 formats · retail, industrial & 2D · live validation · PNG / SVG / PDF · free, no watermark.</p>
       </div>
 

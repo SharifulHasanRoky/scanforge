@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { Homepage } from "@/components/home/homepage";
+import { QrLanding } from "@/components/home/qr-landing";
+import { BarcodeLanding } from "@/components/home/barcode-landing";
 import { LearnPage } from "@/components/home/learn-page";
 import { QrWorkspace } from "@/components/qr/qr-workspace";
 import { BarcodeWorkspace } from "@/components/barcode/barcode-workspace";
@@ -18,7 +20,6 @@ export default function Home() {
 
   useEffect(() => {
     initHashSync();
-    // Hydrate the session from the server (httpOnly cookie).
     fetch("/api/auth/me")
       .then((r) => r.json())
       .then((d) => {
@@ -32,9 +33,25 @@ export default function Home() {
       <Header />
       <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 sm:py-8">
         {view === "home" && <Homepage />}
-        {view === "qr" && <QrWorkspace />}
-        {view === "qr-designer" && <QrWorkspace />}
-        {view === "barcode" && <BarcodeWorkspace />}
+
+        {view === "qr" && (
+          <>
+            <QrLanding />
+            <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6">
+              <QrWorkspace />
+            </div>
+          </>
+        )}
+
+        {view === "barcode" && (
+          <>
+            <BarcodeLanding />
+            <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6">
+              <BarcodeWorkspace />
+            </div>
+          </>
+        )}
+
         {view === "bulk" && <BulkWorkspace />}
         {view === "dashboard" && <Dashboard />}
         {view === "learn" && <LearnPage />}

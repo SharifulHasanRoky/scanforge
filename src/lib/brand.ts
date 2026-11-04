@@ -16,7 +16,6 @@ export const BRAND = {
 export type View =
   | "home"
   | "qr"
-  | "qr-designer"
   | "barcode"
   | "bulk"
   | "dashboard"
@@ -24,11 +23,12 @@ export type View =
   | "about";
 
 export const NAV_ITEMS: { label: string; view: View; desc: string }[] = [
-  { label: "QR Generator", view: "qr", desc: "URL, text, Wi-Fi, vCard & more" },
-  { label: "Barcode Generator", view: "barcode", desc: "EAN, UPC, Code 128, Data Matrix" },
-  { label: "Bulk Generator", view: "bulk", desc: "CSV import, batch ZIP export" },
-  { label: "Dashboard", view: "dashboard", desc: "Save & organise your codes" },
+  { label: "Home", view: "home", desc: "Overview of both workspaces" },
+  { label: "QR Generator", view: "qr", desc: "12 QR types · custom designer · logo" },
+  { label: "Barcode Generator", view: "barcode", desc: "15 formats · retail · industrial · 2D" },
+  { label: "Bulk Generator", view: "bulk", desc: "CSV import · batch ZIP export" },
   { label: "Learn", view: "learn", desc: "Guides & QR/barcode knowledge" },
+  { label: "Dashboard", view: "dashboard", desc: "Save & organise your codes" },
 ];
 
 // Quick stats used across the site — honest, no fabricated traffic numbers.

@@ -106,7 +106,6 @@ export function initHashSync() {
     const valid: View[] = [
       "home",
       "qr",
-      "qr-designer",
       "barcode",
       "bulk",
       "dashboard",

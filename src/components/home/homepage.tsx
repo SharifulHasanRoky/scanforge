@@ -4,34 +4,20 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { QrCode, Barcode, Layers, ShieldCheck, Zap, Gift, Globe, Eye, Image as ImageIcon, FileDown, Link2, Wifi, Mail, Phone, MessageCircle, MapPin, Share2, Calendar, Smartphone, Contact, Type as TypeIcon } from "lucide-react";
+import {
+  QrCode, Barcode, Layers, ShieldCheck, Zap, Gift, Globe, Eye,
+  ArrowRight, CheckCircle2, Sparkles, Type as TypeIcon,
+} from "lucide-react";
 import { BRAND, PLATFORM_FACTS } from "@/lib/brand";
-import { QR_TYPES } from "@/lib/qr/types";
-import { BARCODE_FORMATS } from "@/lib/barcode/formats";
 import { useApp } from "@/lib/store";
-
-const QR_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
-  Link: Link2, Type: TypeIcon, Wifi, Contact, Mail, Phone, MessageSquare: MessageCircle, MessageCircle, MapPin, Share2, Calendar, Smartphone,
-};
 
 const ADVANTAGES = [
   { icon: Gift, title: "Free, truly free", body: "Every core QR and barcode tool is free forever. No premium plans, no paywalls, no credits, no forced watermark." },
   { icon: ShieldCheck, title: "Private by design", body: "Static QR and barcode generation runs in your browser. Your data is not uploaded to a server to produce a code." },
-  { icon: Zap, title: "Fast & reliable", body: "Vector SVG, high-resolution PNG and print-ready PDF exports. Each design passes a decode test before you download." },
+  { icon: Zap, title: "Fast & reliable", body: "Vector SVG, high-resolution PNG and print-ready PDF exports. Each QR design passes a decode test before you download." },
   { icon: Eye, title: "No signup walls", body: "Generate your first codes with no account. Sign up only if you want to save and organise codes in a dashboard." },
   { icon: Globe, title: "Built for the world", body: "12 QR content types and 15 barcode formats — retail, industrial, logistics and 2D — for every region and use case." },
   { icon: Layers, title: "Bulk at scale", body: "Paste a list or import a CSV and generate hundreds of codes in one go, exported as a ZIP or a label-sheet PDF." },
-];
-
-const COMPARISON = [
-  { feature: "Free QR with logo", scanforge: true, monkey: "Limited", canva: "Pro", tiger: "Paid" },
-  { feature: "No account to generate", scanforge: true, monkey: true, canva: false, tiger: false },
-  { feature: "No watermark", scanforge: true, monkey: true, canva: "Pro", tiger: "Paid" },
-  { feature: "No daily generation limit", scanforge: true, monkey: "Limited", canva: "Pro", tiger: "Paid" },
-  { feature: "Barcode generator included", scanforge: true, monkey: false, canva: false, tiger: "Limited" },
-  { feature: "Bulk + CSV import", scanforge: true, monkey: "Paid", canva: false, tiger: "Paid" },
-  { feature: "SVG / PDF export", scanforge: true, monkey: "Paid", canva: "Pro", tiger: "Paid" },
-  { feature: "Browser-side processing", scanforge: true, monkey: "Partial", canva: false, tiger: false },
 ];
 
 const FAQS = [
@@ -50,96 +36,95 @@ export function Homepage() {
 
   return (
     <div>
-      {/* HERO */}
+      {/* HERO — dual service showcase */}
       <section className="relative overflow-hidden border-b border-border">
         <div className="absolute inset-0 grid-pattern opacity-60" aria-hidden />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
-          <div className="flex flex-col justify-center">
-            <Badge variant="secondary" className="mb-4 w-fit">100% free · no watermark · no signup</Badge>
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24">
+          <div className="mx-auto max-w-3xl text-center">
+            <Badge variant="secondary" className="mb-4">100% free · no watermark · no signup</Badge>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-              Create QR Codes &amp; Barcodes. <span className="brand-text">Free. In Seconds.</span>
+              The world&apos;s free <span className="brand-text">QR Code &amp; Barcode</span> Workspace
             </h1>
-            <p className="mt-5 max-w-xl text-lg text-muted-foreground">{BRAND.subheadline}</p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Button size="lg" onClick={() => setView("qr")}><QrCode className="mr-2 h-5 w-5" /> Generate a QR code</Button>
-              <Button size="lg" variant="outline" onClick={() => setView("barcode")}><Barcode className="mr-2 h-5 w-5" /> Make a barcode</Button>
-              <Button size="lg" variant="ghost" onClick={() => setView("bulk")}><Layers className="mr-2 h-5 w-5" /> Bulk generate</Button>
-            </div>
-            <p className="mt-4 text-xs text-muted-foreground">{BRAND.tagline} — {BRAND.promise}</p>
+            <p className="mt-5 text-lg text-muted-foreground">{BRAND.subheadline}</p>
+            <p className="mt-2 text-sm text-muted-foreground">{BRAND.tagline} — {BRAND.promise}</p>
           </div>
-          <div className="flex items-center justify-center">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
-                <div className="flex items-center gap-2 text-sm font-semibold"><QrCode className="h-4 w-4 text-brand" /> QR workspace</div>
-                <p className="mt-1 text-xs text-muted-foreground">12 content types, custom designer, logo &amp; gradients.</p>
-                <div className="mt-3 flex flex-wrap gap-1">
-                  {["URL", "Wi-Fi", "vCard", "WhatsApp", "Event"].map((t) => <Badge key={t} variant="outline" className="text-[10px]">{t}</Badge>)}
+
+          {/* Two big service cards */}
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {/* QR card */}
+            <button
+              onClick={() => setView("qr")}
+              className="group relative overflow-hidden rounded-2xl border border-brand/30 bg-card p-8 text-left shadow-sm transition-all hover:-translate-y-1 hover:border-brand hover:shadow-xl"
+            >
+              <div className="absolute right-0 top-0 h-32 w-32 translate-x-12 -translate-y-12 rounded-full bg-brand/10 blur-2xl" aria-hidden />
+              <div className="relative">
+                <div className="flex items-center justify-between">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-brand/10">
+                    <QrCode className="h-8 w-8 text-brand" />
+                  </div>
+                  <ArrowRight className="h-5 w-5 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-brand" />
                 </div>
-              </div>
-              <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
-                <div className="flex items-center gap-2 text-sm font-semibold"><Barcode className="h-4 w-4 text-highlight" /> Barcode workspace</div>
-                <p className="mt-1 text-xs text-muted-foreground">15 formats — retail, industrial &amp; 2D matrix.</p>
-                <div className="mt-3 flex flex-wrap gap-1">
-                  {["EAN-13", "UPC-A", "Code 128", "Data Matrix", "PDF417"].map((t) => <Badge key={t} variant="outline" className="text-[10px]">{t}</Badge>)}
-                </div>
-              </div>
-              <div className="col-span-2 rounded-2xl border border-border bg-gradient-to-br from-brand/10 to-highlight/10 p-5">
-                <div className="grid grid-cols-3 gap-3 text-center">
-                  {PLATFORM_FACTS.slice(0, 6).map((f) => (
-                    <div key={f.label}>
-                      <p className="text-[10px] uppercase tracking-wide text-muted-foreground">{f.label}</p>
-                      <p className="text-sm font-bold">{f.value}</p>
-                    </div>
+                <h2 className="mt-5 text-2xl font-bold">QR Code Generator</h2>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  12 content types — URL, Wi-Fi, vCard, WhatsApp, Event &amp; more. Custom designer with logo, gradients and patterns. Live scan validation.
+                </p>
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {["URL", "Wi-Fi", "vCard", "WhatsApp", "Event", "Social"].map((t) => (
+                    <Badge key={t} variant="outline" className="text-[11px]">{t}</Badge>
                   ))}
                 </div>
+                <p className="mt-5 text-sm font-semibold brand-text">Open QR generator →</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            </button>
 
-      {/* QR TYPES */}
-      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
-        <div className="flex items-end justify-between">
-          <div>
-            <h2 className="text-2xl font-bold sm:text-3xl">12 QR code types, one workspace</h2>
-            <p className="mt-1 text-muted-foreground">Pick a type, fill the content, customise the design, download. All free.</p>
-          </div>
-          <Button variant="outline" onClick={() => setView("qr")} className="hidden sm:inline-flex">Open QR generator</Button>
-        </div>
-        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {QR_TYPES.map((t) => {
-            const Icon = QR_ICONS[t.icon] || TypeIcon;
-            return (
-              <button key={t.id} onClick={() => setView("qr")} className="group rounded-xl border border-border bg-card p-4 text-left transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-md">
-                <Icon className="h-6 w-6 text-brand" />
-                <h3 className="mt-2 text-sm font-semibold">{t.label}</h3>
-                <p className="mt-0.5 text-xs text-muted-foreground">{t.desc}</p>
-              </button>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* BARCODE FORMATS */}
-      <section className="border-y border-border bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
-          <div className="flex items-end justify-between">
-            <div>
-              <h2 className="text-2xl font-bold sm:text-3xl">15 barcode formats</h2>
-              <p className="mt-1 text-muted-foreground">Retail, industrial, logistics and 2D — with live validation and check-digit checks.</p>
-            </div>
-            <Button variant="outline" onClick={() => setView("barcode")} className="hidden sm:inline-flex">Open barcode generator</Button>
-          </div>
-          <div className="mt-6 grid gap-2 sm:grid-cols-3 lg:grid-cols-5">
-            {BARCODE_FORMATS.map((f) => (
-              <button key={f.id} onClick={() => setView("barcode")} className="rounded-lg border border-border bg-card p-3 text-left transition-colors hover:border-brand">
+            {/* Barcode card */}
+            <button
+              onClick={() => setView("barcode")}
+              className="group relative overflow-hidden rounded-2xl border border-highlight/40 bg-card p-8 text-left shadow-sm transition-all hover:-translate-y-1 hover:border-highlight hover:shadow-xl"
+            >
+              <div className="absolute right-0 top-0 h-32 w-32 translate-x-12 -translate-y-12 rounded-full bg-highlight/10 blur-2xl" aria-hidden />
+              <div className="relative">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold">{f.label}</span>
-                  {f.twoD && <Badge variant="secondary" className="text-[9px]">2D</Badge>}
+                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-highlight/10">
+                    <Barcode className="h-8 w-8 text-highlight" />
+                  </div>
+                  <ArrowRight className="h-5 w-5 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-highlight" />
                 </div>
-                <p className="mt-0.5 text-[11px] text-muted-foreground line-clamp-2">{f.desc}</p>
-              </button>
+                <h2 className="mt-5 text-2xl font-bold">Barcode Generator</h2>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  15 formats — retail (EAN, UPC), industrial (ITF-14, GS1-128) &amp; 2D (Data Matrix, PDF417, Aztec). Live validation with check-digit checks.
+                </p>
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {["EAN-13", "UPC-A", "Code 128", "Data Matrix", "PDF417", "Aztec"].map((t) => (
+                    <Badge key={t} variant="outline" className="text-[11px]">{t}</Badge>
+                  ))}
+                </div>
+                <p className="mt-5 text-sm font-semibold text-highlight">Open barcode generator →</p>
+              </div>
+            </button>
+          </div>
+
+          {/* Quick CTA row */}
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Button variant="outline" onClick={() => setView("bulk")}>
+              <Layers className="mr-2 h-4 w-4" /> Bulk generate
+            </Button>
+            <Button variant="ghost" onClick={() => setView("learn")}>
+              <TypeIcon className="mr-2 h-4 w-4" /> Learn how it works
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* PLATFORM FACTS */}
+      <section className="border-b border-border bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+            {PLATFORM_FACTS.map((f) => (
+              <div key={f.label} className="text-center">
+                <p className="text-[11px] uppercase tracking-wide text-muted-foreground">{f.label}</p>
+                <p className="mt-1 text-sm font-bold">{f.value}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -147,9 +132,12 @@ export function Homepage() {
 
       {/* ADVANTAGES */}
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
-        <h2 className="text-2xl font-bold sm:text-3xl">Why people choose ScanForge</h2>
-        <p className="mt-1 text-muted-foreground">A complete QR &amp; barcode workspace that stays free and respects your data.</p>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="text-center">
+          <Badge variant="secondary" className="mb-3"><Sparkles className="mr-1.5 h-3.5 w-3.5" /> Why ScanForge</Badge>
+          <h2 className="text-2xl font-bold sm:text-3xl">A complete QR &amp; barcode workspace, free forever</h2>
+          <p className="mt-2 text-muted-foreground">Two powerful tools, one consistent experience — built for individuals, businesses and teams worldwide.</p>
+        </div>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {ADVANTAGES.map((a) => (
             <Card key={a.title} className="p-5">
               <a.icon className="h-6 w-6 text-brand" />
@@ -160,50 +148,19 @@ export function Homepage() {
         </div>
       </section>
 
-      {/* COMPARISON */}
-      <section className="border-y border-border bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
-          <h2 className="text-2xl font-bold sm:text-3xl">How ScanForge compares</h2>
-          <p className="mt-1 text-muted-foreground">An honest, independently presented feature comparison.</p>
-          <div className="mt-6 overflow-x-auto">
-            <table className="w-full min-w-[640px] border-collapse text-sm">
-              <thead>
-                <tr className="border-b border-border text-left">
-                  <th className="py-3 pr-4 font-semibold">Feature</th>
-                  <th className="px-3 py-3 text-center font-semibold brand-text">ScanForge</th>
-                  <th className="px-3 py-3 text-center font-medium text-muted-foreground">QRCode Monkey</th>
-                  <th className="px-3 py-3 text-center font-medium text-muted-foreground">Canva</th>
-                  <th className="px-3 py-3 text-center font-medium text-muted-foreground">QR TIGER</th>
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARISON.map((row) => (
-                  <tr key={row.feature} className="border-b border-border/60">
-                    <td className="py-3 pr-4">{row.feature}</td>
-                    <td className="px-3 py-3 text-center font-semibold text-brand">{row.scanforge === true ? "✓" : row.scanforge}</td>
-                    <td className="px-3 py-3 text-center text-muted-foreground">{typeof row.monkey === "boolean" ? (row.monkey ? "✓" : "—") : row.monkey}</td>
-                    <td className="px-3 py-3 text-center text-muted-foreground">{typeof row.canva === "boolean" ? (row.canva ? "✓" : "—") : row.canva}</td>
-                    <td className="px-3 py-3 text-center text-muted-foreground">{typeof row.tiger === "boolean" ? (row.tiger ? "✓" : "—") : row.tiger}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-3 text-xs text-muted-foreground">Comparison reflects publicly advertised feature tiers at the time of writing and is presented independently. Competitor names belong to their respective owners; ScanForge is not affiliated with them.</p>
-        </div>
-      </section>
-
       {/* FAQ */}
-      <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
-        <h2 className="text-center text-2xl font-bold sm:text-3xl">Frequently asked questions</h2>
-        <Accordion type="single" collapsible className="mt-6">
-          {FAQS.map((f, i) => (
-            <AccordionItem key={i} value={`item-${i}`}>
-              <AccordionTrigger className="text-left">{f.q}</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">{f.a}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+      <section className="border-t border-border bg-muted/30">
+        <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
+          <h2 className="text-center text-2xl font-bold sm:text-3xl">Frequently asked questions</h2>
+          <Accordion type="single" collapsible className="mt-6">
+            {FAQS.map((f, i) => (
+              <AccordionItem key={i} value={`item-${i}`}>
+                <AccordionTrigger className="text-left">{f.q}</AccordionTrigger>
+                <AccordionContent className="text-sm text-muted-foreground">{f.a}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </section>
 
       {/* CTA */}
@@ -213,10 +170,19 @@ export function Homepage() {
             <h2 className="text-2xl font-bold sm:text-3xl">Start creating in seconds</h2>
             <p className="mx-auto mt-2 max-w-xl text-white/90">No account, no watermark, no daily limit. Just open a tool and generate.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Button size="lg" variant="secondary" onClick={() => setView("qr")}>QR generator</Button>
-              <Button size="lg" variant="secondary" onClick={() => setView("barcode")}>Barcode generator</Button>
-              <Button size="lg" variant="secondary" onClick={() => setView("bulk")}>Bulk generator</Button>
+              <Button size="lg" variant="secondary" onClick={() => setView("qr")}>
+                <QrCode className="mr-2 h-5 w-5" /> QR generator
+              </Button>
+              <Button size="lg" variant="secondary" onClick={() => setView("barcode")}>
+                <Barcode className="mr-2 h-5 w-5" /> Barcode generator
+              </Button>
+              <Button size="lg" variant="secondary" onClick={() => setView("bulk")}>
+                <Layers className="mr-2 h-5 w-5" /> Bulk generator
+              </Button>
             </div>
+            <p className="mt-6 inline-flex items-center gap-1.5 text-xs text-white/80">
+              <CheckCircle2 className="h-3.5 w-3.5" /> Free forever · no forced watermarks · no daily quotas
+            </p>
           </div>
         </div>
       </section>
