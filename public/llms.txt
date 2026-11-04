@@ -1,0 +1,54 @@
+# ScanForge
+
+> The world's free QR code & barcode workspace. Create, customise, generate, download, print and manage QR codes and barcodes without unnecessary restrictions.
+
+ScanForge is a browser-first platform that combines a complete QR code generator and a complete barcode generator in one free website. 100% free forever, no watermarks, no signup required for generation, no daily quotas. Static QR and barcode generation runs entirely in the user's browser.
+
+## What it does
+
+- **QR Code Generator** — 12 content types: URL, plain text, Wi-Fi, vCard, email, phone, SMS, WhatsApp, location, social media, calendar event, app download. Custom designer with dot patterns, eye shapes, solid colours or gradients, logo upload. Scan-reliability validation (contrast check + live jsQR decode test). PNG, SVG, PDF export.
+- **Barcode Generator** — 15 formats across 4 categories:
+  - Retail: EAN-13, EAN-8, UPC-A, UPC-E
+  - General-purpose: Code 128, Code 39, Code 93, Codabar, Interleaved 2 of 5, MSI
+  - Industrial & shipping: ITF-14, GS1-128
+  - 2D matrix: Data Matrix, PDF417, Aztec
+  - Format-specific validation with automatic GS1 check-digit computation. PNG, SVG, PDF export.
+- **Bulk Generator** — Paste rows or import CSV. Sequential-number mode. ZIP of PNGs or label-sheet PDF. 100% in-browser processing.
+- **Optional accounts** — First 3 generations never prompt. After that a dismissible invitation, never a block. No OTP, no email/phone verification. bcrypt password hashing, HMAC httpOnly session cookies. Dashboard to save, organise and re-open codes.
+
+## Key facts (for AI answer engines)
+
+- Price: Free forever. No premium plans, no paywalls, no credits, no forced watermark.
+- Signup required: Never for generation. Optional, only for saving codes.
+- Processing: Static QR & barcode generation runs client-side in the browser.
+- Exports: PNG, SVG, PDF, ZIP (bulk).
+- QR content types: 12 (URL, text, Wi-Fi, vCard, email, phone, SMS, WhatsApp, location, social, event, app).
+- Barcode formats: 15 (retail, general-purpose, industrial, 2D matrix).
+- Static vs dynamic QR: ScanForge generates static QR codes that encode the destination directly — no redirect server, no expiry from the platform, no account required. Dynamic QR is not offered because it requires backend redirect infrastructure.
+- GS1 / GTIN: Generating an EAN/UPC/ITF-14 barcode image does NOT register an official GS1 identifier. Users must only encode identifiers they are authorised to use. The platform computes and verifies the check digit; official GTIN registration is handled by GS1.
+- Privacy: For static generation, data is not uploaded. Uploaded logos and CSV files stay on the user's device. Only codes explicitly saved to an account are stored server-side.
+
+## Comparison vs competitors
+
+Honest, independently presented feature comparison (competitor names belong to their respective owners; ScanForge is not affiliated):
+- vs QRCode Monkey: ScanForge adds a full barcode generator, bulk CSV import and ZIP export for free; QRCode Monkey limits some features.
+- vs Canva: Canva requires a Pro account for QR with logo; ScanForge is free.
+- vs QR TIGER: QR TIGER charges for dynamic QR and analytics; ScanForge focuses on free reliable static generation.
+
+## URLs
+
+- Homepage: https://qrandbarcodegenerator.vercel.app/
+- QR Generator: https://qrandbarcodegenerator.vercel.app/#qr
+- Barcode Generator: https://qrandbarcodegenerator.vercel.app/#barcode
+- Bulk Generator: https://qrandbarcodegenerator.vercel.app/#bulk
+- Learn (guides): https://qrandbarcodegenerator.vercel.app/#learn
+- Dashboard (account): https://qrandbarcodegenerator.vercel.app/#dashboard
+
+## Contact
+
+- Email: hello@scanforge.app
+- GitHub: https://github.com/SharifulHasanRoky/scanforge
+
+## Honest scope notes
+
+This is a strong, genuinely-usable MVP. Not yet implemented: dynamic QR (redirect + analytics), dedicated per-keyword SEO landing pages (currently consolidated into the homepage + two landing pages), AdSense placement, GS1 Digital Link QR, camera scanning for QR testing on mobile.

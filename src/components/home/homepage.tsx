@@ -10,6 +10,8 @@ import {
 } from "lucide-react";
 import { BRAND, PLATFORM_FACTS } from "@/lib/brand";
 import { useApp } from "@/lib/store";
+import { JsonLd, organizationSchema, webApplicationSchema, websiteSchema, faqSchema, breadcrumbSchema } from "@/lib/seo";
+import { HOME_FAQS } from "@/lib/faqs";
 
 const ADVANTAGES = [
   { icon: Gift, title: "Free, truly free", body: "Every core QR and barcode tool is free forever. No premium plans, no paywalls, no credits, no forced watermark." },
@@ -20,22 +22,20 @@ const ADVANTAGES = [
   { icon: Layers, title: "Bulk at scale", body: "Paste a list or import a CSV and generate hundreds of codes in one go, exported as a ZIP or a label-sheet PDF." },
 ];
 
-const FAQS = [
-  { q: "Is ScanForge really free?", a: "Yes. Every core QR and barcode generator is free forever — including logo upload, custom designs, bulk generation and PNG/SVG/PDF export. We never add a watermark and we never lock generation behind a paywall. The platform is funded by ads, not by charging you." },
-  { q: "Do I need to create an account?", a: "No. You can generate and download QR codes and barcodes without signing up. Accounts are completely optional and only exist so you can save, organise and re-open your codes later. The first three generations never prompt you; after that you will see one dismissible invitation, never a block." },
-  { q: "What is the difference between static and dynamic QR codes?", a: "A static QR code encodes its destination directly inside the image — it never expires on our side and needs no redirect server, database or account. A dynamic QR code points to a short redirect URL that you can edit later, which requires backend infrastructure. ScanForge focuses on reliable static generation; dynamic codes are only introduced where the redirect service can be maintained long-term." },
-  { q: "Will my custom-designed QR code still scan?", a: "Each design is checked against a contrast threshold and re-decoded with a QR reader before you download. If contrast is low, the logo too large or the quiet zone too small, you will see a warning. For logos we recommend raising error correction to level Q or H and keeping the logo under ~30% of the code area." },
-  { q: "Does generating a barcode register a real GTIN?", a: "No. Generating an EAN, UPC or ITF-14 image does not issue or register an official GS1 identifier. You must only encode identifiers you are authorised to use. ScanForge computes and checks the GS1 check digit so the barcode is structurally valid, but registration is handled by GS1 or your local GS1 member organisation." },
-  { q: "Is my data uploaded anywhere?", a: "For static QR and barcode generation, processing happens in your browser. Uploaded logos and CSV files for bulk generation stay on your device. Only codes you explicitly save to your account are stored on the server, and only you can access them." },
-  { q: "Which export formats are supported?", a: "PNG (high-resolution raster), SVG (vector, where the format allows), PDF (print-ready, A4) and ZIP (for bulk PNG export). Label-sheet PDFs lay multiple codes out on a single A4 page for printing." },
-  { q: "How many codes can I generate in bulk?", a: "As many as your device can handle. Bulk generation runs locally and shows live progress with the ability to cancel. Invalid rows are reported and skipped without losing the valid ones." },
-];
+const FAQS = HOME_FAQS;
 
 export function Homepage() {
   const setView = useApp((s) => s.setView);
 
   return (
     <div>
+      <JsonLd data={[
+        organizationSchema(),
+        webApplicationSchema(),
+        websiteSchema(),
+        faqSchema(HOME_FAQS),
+        breadcrumbSchema([{ name: "Home", path: "" }]),
+      ]} />
       {/* HERO — dual service showcase */}
       <section className="relative overflow-hidden border-b border-border">
         <div className="absolute inset-0 grid-pattern opacity-60" aria-hidden />

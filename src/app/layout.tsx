@@ -51,11 +51,20 @@ export const metadata: Metadata = {
     url: BRAND.url,
     siteName: BRAND.name,
     type: "website",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "ScanForge — Free QR Code & Barcode Generator",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${BRAND.name} — Free QR Code & Barcode Generator`,
     description: BRAND.subheadline,
+    images: ["/og-image.svg"],
   },
   robots: {
     index: true,

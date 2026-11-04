@@ -1,0 +1,32 @@
+// FAQ content shared between landing pages and schema.org markup.
+// Kept in a separate module so both the visible accordion and the JSON-LD
+// FAQPage schema stay perfectly in sync.
+
+export const HOME_FAQS = [
+  { q: "Is ScanForge really free?", a: "Yes. Every core QR and barcode generator is free forever — including logo upload, custom designs, bulk generation and PNG/SVG/PDF export. We never add a watermark and we never lock generation behind a paywall. The platform is funded by ads, not by charging you." },
+  { q: "Do I need to create an account?", a: "No. You can generate and download QR codes and barcodes without signing up. Accounts are completely optional and only exist so you can save, organise and re-open your codes later. The first three generations never prompt you; after that you will see one dismissible invitation, never a block." },
+  { q: "What is the difference between static and dynamic QR codes?", a: "A static QR code encodes its destination directly inside the image — it never expires on our side and needs no redirect server, database or account. A dynamic QR code points to a short redirect URL that you can edit later, which requires backend infrastructure. ScanForge focuses on reliable static generation; dynamic codes are only introduced where the redirect service can be maintained long-term." },
+  { q: "Will my custom-designed QR code still scan?", a: "Each design is checked against a contrast threshold and re-decoded with a QR reader before you download. If contrast is low, the logo too large or the quiet zone too small, you will see a warning. For logos we recommend raising error correction to level Q or H and keeping the logo under ~30% of the code area." },
+  { q: "Does generating a barcode register a real GTIN?", a: "No. Generating an EAN, UPC or ITF-14 image does not issue or register an official GS1 identifier. You must only encode identifiers you are authorised to use. ScanForge computes and checks the GS1 check digit so the barcode is structurally valid, but registration is handled by GS1 or your local GS1 member organisation." },
+  { q: "Is my data uploaded anywhere?", a: "For static QR and barcode generation, processing happens in your browser. Uploaded logos and CSV files for bulk generation stay on your device. Only codes you explicitly save to your account are stored on the server, and only you can access them." },
+  { q: "Which export formats are supported?", a: "PNG (high-resolution raster), SVG (vector, where the format allows), PDF (print-ready, A4) and ZIP (for bulk PNG export). Label-sheet PDFs lay multiple codes out on a single A4 page for printing." },
+  { q: "How many codes can I generate in bulk?", a: "As many as your device can handle. Bulk generation runs locally and shows live progress with the ability to cancel. Invalid rows are reported and skipped without losing the valid ones." },
+];
+
+export const QR_FAQS = [
+  { q: "How do I create a QR code for free?", a: "Open the QR generator, pick a content type (URL, Wi-Fi, vCard…), fill in the fields and the live preview updates instantly. Customise colours, dot pattern and logo if you want, then download as PNG, SVG or PDF — completely free, no account, no watermark." },
+  { q: "Can I add a logo to my QR code?", a: "Yes. In the Design tab, upload a PNG, JPG or SVG logo. Keep the logo under ~30% of the code area and raise error correction to level Q or H so the code stays scannable. We automatically hide the dots behind the logo." },
+  { q: "Will my custom QR code still scan?", a: "Each design is checked against a contrast threshold (≥3:1) and re-decoded with a QR reader before you download. If contrast is low, the logo too large or the quiet zone too small, you will see a clear warning." },
+  { q: "What is the difference between static and dynamic QR codes?", a: "A static QR encodes its destination directly inside the image — it never expires on our side and needs no redirect server or account. A dynamic QR points to a short redirect URL you can edit later, which requires backend infrastructure. ScanForge focuses on reliable static generation." },
+  { q: "Which QR content types are supported?", a: "12 types: URL/website, plain text, Wi-Fi, vCard contact, email, phone call, SMS, WhatsApp, location, social media, calendar event and app download." },
+  { q: "Do I need to sign up?", a: "No. You can generate and download QR codes without an account. Accounts are completely optional and only for saving and organising codes you want to re-open later." },
+];
+
+export const BARCODE_FAQS = [
+  { q: "How do I generate a barcode for free?", a: "Open the barcode generator, pick a format (EAN-13, UPC-A, Code 128, Data Matrix…), type your value and we validate it instantly. Customise dimensions and colours, then download as PNG, SVG or PDF — completely free, no account, no watermark." },
+  { q: "Which barcode format should I use?", a: "For retail products sold at point-of-sale: EAN-13 (worldwide) or UPC-A (North America). For cartons and shipping: ITF-14. For internal use and inventory: Code 128 (most flexible, full ASCII). For pharma and electronics: Data Matrix. For tickets: Aztec or PDF417." },
+  { q: "Does generating a barcode register a real GTIN?", a: "No. Generating an EAN, UPC or ITF-14 image does not issue or register an official GS1 identifier. You must only encode identifiers you are authorised to use. ScanForge computes and checks the GS1 check digit so the barcode is structurally valid, but registration is handled by GS1 or your local GS1 member organisation." },
+  { q: "What is a check digit and why does it matter?", a: "A check digit is the last digit of an EAN, UPC or ITF-14 code, mathematically derived from the previous digits to let scanners detect errors. ScanForge computes it automatically and warns you if the value you entered has an incorrect check digit — this prevents printing unscannable barcodes." },
+  { q: "Can I generate barcodes in bulk?", a: "Yes. Open the bulk generator, paste a list (one per line) or import a CSV, choose your barcode format, and download a ZIP of PNGs or a single label-sheet PDF. Processing runs entirely in your browser." },
+  { q: "Are 2D barcodes like QR codes?", a: "Data Matrix, PDF417 and Aztec are 2D symbologies like QR, but optimised for different use cases. Data Matrix is compact and used in pharma; PDF417 holds large payloads for documents; Aztec is used on transport tickets. QR codes are the most universally recognised by consumer phone cameras." },
+];

@@ -10,6 +10,8 @@ import {
 } from "lucide-react";
 import { BARCODE_FORMATS } from "@/lib/barcode/formats";
 import { useApp } from "@/lib/store";
+import { JsonLd, webApplicationSchema, faqSchema, breadcrumbSchema } from "@/lib/seo";
+import { BARCODE_FAQS } from "@/lib/faqs";
 
 const FEATURES = [
   { icon: Layers, title: "15 barcode formats", body: "Retail (EAN-13, EAN-8, UPC-A, UPC-E), general-purpose (Code 128/39/93, Codabar, ITF, MSI), industrial (ITF-14, GS1-128) and 2D matrix (Data Matrix, PDF417, Aztec)." },
@@ -52,14 +54,7 @@ const USE_CASES = [
   { title: "Libraries & archives", body: "Codabar for book numbering, Code 39 for shelf labels, ITF for archive boxes." },
 ];
 
-const FAQS = [
-  { q: "How do I generate a barcode for free?", a: "Open the barcode generator, pick a format (EAN-13, UPC-A, Code 128, Data Matrix…), type your value and we validate it instantly. Customise dimensions and colours, then download as PNG, SVG or PDF — completely free, no account, no watermark." },
-  { q: "Which barcode format should I use?", a: "For retail products sold at point-of-sale: EAN-13 (worldwide) or UPC-A (North America). For cartons and shipping: ITF-14. For internal use and inventory: Code 128 (most flexible, full ASCII). For pharma and electronics: Data Matrix. For tickets: Aztec or PDF417." },
-  { q: "Does generating a barcode register a real GTIN?", a: "No. Generating an EAN, UPC or ITF-14 image does not issue or register an official GS1 identifier. You must only encode identifiers you are authorised to use. ScanForge computes and checks the GS1 check digit so the barcode is structurally valid, but registration is handled by GS1 or your local GS1 member organisation." },
-  { q: "What is a check digit and why does it matter?", a: "A check digit is the last digit of an EAN, UPC or ITF-14 code, mathematically derived from the previous digits to let scanners detect errors. ScanForge computes it automatically and warns you if the value you entered has an incorrect check digit — this prevents printing unscannable barcodes." },
-  { q: "Can I generate barcodes in bulk?", a: "Yes. Open the bulk generator, paste a list (one per line) or import a CSV, choose your barcode format, and download a ZIP of PNGs or a single label-sheet PDF. Processing runs entirely in your browser." },
-  { q: "Are 2D barcodes like QR codes?", a: "Data Matrix, PDF417 and Aztec are 2D symbologies like QR, but optimised for different use cases. Data Matrix is compact and used in pharma; PDF417 holds large payloads for documents; Aztec is used on transport tickets. QR codes are the most universally recognised by consumer phone cameras." },
-];
+const FAQS = BARCODE_FAQS;
 
 export function BarcodeLanding() {
   const setView = useApp((s) => s.setView);
@@ -70,6 +65,14 @@ export function BarcodeLanding() {
 
   return (
     <div>
+      <JsonLd data={[
+        webApplicationSchema(),
+        faqSchema(BARCODE_FAQS),
+        breadcrumbSchema([
+          { name: "Home", path: "" },
+          { name: "Barcode Generator", path: "#barcode" },
+        ]),
+      ]} />
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border">
         <div className="absolute inset-0 grid-pattern opacity-50" aria-hidden />

@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import { QR_TYPES } from "@/lib/qr/types";
 import { useApp } from "@/lib/store";
+import { JsonLd, webApplicationSchema, faqSchema, breadcrumbSchema } from "@/lib/seo";
+import { QR_FAQS } from "@/lib/faqs";
 
 const QR_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   Link: Link2, Type: TypeIcon, Wifi, Contact, Mail, Phone, MessageSquare: MessageCircle, MessageCircle, MapPin, Share2, Calendar, Smartphone,
@@ -34,14 +36,7 @@ const USE_CASES = [
   { title: "Personal & creators", body: "Link-in-bio QR, vCard QR, social QR for portfolios, event QR for meetups." },
 ];
 
-const FAQS = [
-  { q: "How do I create a QR code for free?", a: "Open the QR generator, pick a content type (URL, Wi-Fi, vCard…), fill in the fields and the live preview updates instantly. Customise colours, dot pattern and logo if you want, then download as PNG, SVG or PDF — completely free, no account, no watermark." },
-  { q: "Can I add a logo to my QR code?", a: "Yes. In the Design tab, upload a PNG, JPG or SVG logo. Keep the logo under ~30% of the code area and raise error correction to level Q or H so the code stays scannable. We automatically hide the dots behind the logo." },
-  { q: "Will my custom QR code still scan?", a: "Each design is checked against a contrast threshold (≥3:1) and re-decoded with a QR reader before you download. If contrast is low, the logo too large or the quiet zone too small, you will see a clear warning." },
-  { q: "What is the difference between static and dynamic QR codes?", a: "A static QR encodes its destination directly inside the image — it never expires on our side and needs no redirect server or account. A dynamic QR points to a short redirect URL you can edit later, which requires backend infrastructure. ScanForge focuses on reliable static generation." },
-  { q: "Which QR content types are supported?", a: "12 types: URL/website, plain text, Wi-Fi, vCard contact, email, phone call, SMS, WhatsApp, location, social media, calendar event and app download." },
-  { q: "Do I need to sign up?", a: "No. You can generate and download QR codes without an account. Accounts are completely optional and only for saving and organising codes you want to re-open later." },
-];
+const FAQS = QR_FAQS;
 
 export function QrLanding() {
   const setView = useApp((s) => s.setView);
@@ -52,6 +47,14 @@ export function QrLanding() {
 
   return (
     <div>
+      <JsonLd data={[
+        webApplicationSchema(),
+        faqSchema(QR_FAQS),
+        breadcrumbSchema([
+          { name: "Home", path: "" },
+          { name: "QR Generator", path: "#qr" },
+        ]),
+      ]} />
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border">
         <div className="absolute inset-0 grid-pattern opacity-50" aria-hidden />
