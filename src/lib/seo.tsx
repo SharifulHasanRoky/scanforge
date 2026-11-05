@@ -89,6 +89,20 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
   };
 }
 
+export function howToSchema(name: string, steps: { step: string; text: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    step: steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.step,
+      text: s.text,
+    })),
+  };
+}
+
 // Injects a JSON-LD script tag into the page head. Call from a client component.
 export function JsonLd({ data }: { data: object | object[] }) {
   const items = Array.isArray(data) ? data : [data];

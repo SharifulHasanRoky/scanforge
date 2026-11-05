@@ -19,10 +19,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(BRAND.url),
   title: {
-    default: `${BRAND.name} — Free QR Code & Barcode Generator Online`,
-    template: `%s · ${BRAND.name}`,
+    default: "Free QR Code & Barcode Generator Online — ScanForge",
+    template: "%s · ScanForge",
   },
-  description: BRAND.subheadline,
+  description:
+    "Free QR code generator and barcode generator online. Create custom QR codes with logo, generate EAN/UPC/Code 128 barcodes, bulk generate from CSV, download PNG/SVG/PDF. No signup, no watermark, no daily limits.",
   keywords: [
     "qr code generator",
     "free qr code generator",
@@ -37,6 +38,8 @@ export const metadata: Metadata = {
     "upc barcode generator",
     "code 128 barcode generator",
     "datamatrix generator",
+    "qr code generator online",
+    "best free qr code generator",
   ],
   authors: [{ name: BRAND.name }],
   creator: BRAND.name,

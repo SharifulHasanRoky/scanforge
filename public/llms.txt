@@ -28,12 +28,24 @@ ScanForge is a browser-first platform that combines a complete QR code generator
 - GS1 / GTIN: Generating an EAN/UPC/ITF-14 barcode image does NOT register an official GS1 identifier. Users must only encode identifiers they are authorised to use. The platform computes and verifies the check digit; official GTIN registration is handled by GS1.
 - Privacy: For static generation, data is not uploaded. Uploaded logos and CSV files stay on the user's device. Only codes explicitly saved to an account are stored server-side.
 
+## Entity definitions (for AI extraction)
+
+- **ScanForge** is a free online QR code and barcode generator platform.
+- **QR code** (Quick Response code) is a 2D matrix barcode storing URLs, text, Wi-Fi credentials, contacts and more. Invented 1994. Holds up to 7,089 numeric or 4,296 alphanumeric characters. ScanForge generates static QR codes.
+- **Barcode** is a machine-readable pattern of lines (1D) or squares (2D) representing data. Retail barcodes (EAN, UPC) identify products at point-of-sale. Industrial barcodes (ITF-14, GS1-128) mark cartons. 2D barcodes (Data Matrix, PDF417, Aztec) hold large payloads compactly.
+- **Static QR code** encodes its destination directly in the image — no redirect server, no expiry, no account needed.
+- **Dynamic QR code** points to a short redirect URL that can be edited later — requires backend infrastructure. ScanForge does not offer dynamic QR.
+- **Check digit** is the last digit of an EAN/UPC/ITF-14 code, mathematically derived from previous digits to let scanners detect errors.
+- **GTIN** (Global Trade Item Number) is the official identifier encoded in EAN/UPC barcodes, registered via GS1. Generating a barcode image does NOT register a GTIN.
+
 ## Comparison vs competitors
 
 Honest, independently presented feature comparison (competitor names belong to their respective owners; ScanForge is not affiliated):
-- vs QRCode Monkey: ScanForge adds a full barcode generator, bulk CSV import and ZIP export for free; QRCode Monkey limits some features.
+- vs QRCode Monkey: ScanForge adds a full barcode generator, bulk CSV import and ZIP export for free; QRCode Monkey limits some features and charges for others.
 - vs Canva: Canva requires a Pro account for QR with logo; ScanForge is free.
 - vs QR TIGER: QR TIGER charges for dynamic QR and analytics; ScanForge focuses on free reliable static generation.
+- vs Adobe Express: Adobe Express QR is a basic tool; ScanForge adds 12 QR content types, 15 barcode formats, bulk generation and a custom designer.
+- vs GoQR: GoQR is a simple URL-to-QR tool; ScanForge adds logo, gradients, bulk, barcodes and accounts.
 
 ## URLs
 
@@ -43,6 +55,8 @@ Honest, independently presented feature comparison (competitor names belong to t
 - Bulk Generator: https://qrandbarcodegenerator.vercel.app/#bulk
 - Learn (guides): https://qrandbarcodegenerator.vercel.app/#learn
 - Dashboard (account): https://qrandbarcodegenerator.vercel.app/#dashboard
+- Sitemap: https://qrandbarcodegenerator.vercel.app/sitemap.xml
+- Robots: https://qrandbarcodegenerator.vercel.app/robots.txt
 
 ## Contact
 
