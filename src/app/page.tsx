@@ -6,6 +6,7 @@ import { Footer } from "@/components/site/footer";
 import { Homepage } from "@/components/home/homepage";
 import { QrLanding } from "@/components/home/qr-landing";
 import { BarcodeLanding } from "@/components/home/barcode-landing";
+import { QrTypeLanding } from "@/components/home/qr-type-landing";
 import { LearnPage } from "@/components/home/learn-page";
 import { QrWorkspace } from "@/components/qr/qr-workspace";
 import { BarcodeWorkspace } from "@/components/barcode/barcode-workspace";
@@ -13,6 +14,7 @@ import { BulkWorkspace } from "@/components/bulk/bulk-workspace";
 import { Dashboard } from "@/components/dashboard/dashboard";
 import { AuthModal } from "@/components/auth/auth-modal";
 import { useApp, initHashSync } from "@/lib/store";
+import { QR_LANDING_CONTENT } from "@/lib/qr/landing-content";
 
 export default function Home() {
   const view = useApp((s) => s.view);
@@ -27,6 +29,20 @@ export default function Home() {
       })
       .catch(() => {});
   }, [setUser]);
+
+  // Render a dedicated QR-type landing + the workspace pre-seeded with the type.
+  const renderQrTypeView = (slug: string) => {
+    const content = QR_LANDING_CONTENT[slug];
+    if (!content) return null;
+    return (
+      <>
+        <QrTypeLanding slug={slug} />
+        <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6">
+          <QrWorkspace initialType={content.typeId} />
+        </div>
+      </>
+    );
+  };
 
   return (
     <>
@@ -51,6 +67,10 @@ export default function Home() {
             </div>
           </>
         )}
+
+        {view === "wifi-qr" && renderQrTypeView("wifi-qr")}
+        {view === "vcard-qr" && renderQrTypeView("vcard-qr")}
+        {view === "whatsapp-qr" && renderQrTypeView("whatsapp-qr")}
 
         {view === "bulk" && <BulkWorkspace />}
         {view === "dashboard" && <Dashboard />}

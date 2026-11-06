@@ -157,6 +157,36 @@ export function Homepage() {
         </div>
       </section>
 
+      {/* POPULAR QR TYPES — internal links to dedicated landing pages */}
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+        <div className="flex items-end justify-between">
+          <div>
+            <h2 className="text-2xl font-bold sm:text-3xl">Popular QR code generators</h2>
+            <p className="mt-1 text-muted-foreground">Dedicated pages with guides, use cases and FAQs for each QR type.</p>
+          </div>
+        </div>
+        <div className="mt-6 grid gap-3 sm:grid-cols-3">
+          {[
+            { slug: "wifi-qr", label: "Wi-Fi QR Code Generator", desc: "Share network credentials — guests scan and connect instantly." },
+            { slug: "vcard-qr", label: "vCard QR Code Generator", desc: "Share contact details as a scannable digital business card." },
+            { slug: "whatsapp-qr", label: "WhatsApp QR Code Generator", desc: "Open a WhatsApp chat with a pre-filled message." },
+          ].map((p) => (
+            <button
+              key={p.slug}
+              onClick={() => setView(p.slug as typeof view)}
+              className="group rounded-xl border border-border bg-card p-5 text-left transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-md"
+            >
+              <QrCode className="h-6 w-6 text-brand" />
+              <h3 className="mt-2 text-base font-semibold">{p.label}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
+              <p className="mt-3 text-xs font-semibold brand-text inline-flex items-center gap-1">
+                Open <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+              </p>
+            </button>
+          ))}
+        </div>
+      </section>
+
       {/* WHAT IS — AEO definition block */}
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <div className="grid gap-8 lg:grid-cols-2">

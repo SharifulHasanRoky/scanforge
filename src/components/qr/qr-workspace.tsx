@@ -25,8 +25,8 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   Share2: TypeIcon, Calendar: TypeIcon, Smartphone: TypeIcon,
 };
 
-export function QrWorkspace() {
-  const [type, setType] = useState<QrTypeId>("url");
+export function QrWorkspace({ initialType, headingLevel = "h2" }: { initialType?: QrTypeId; headingLevel?: "h1" | "h2" }) {
+  const [type, setType] = useState<QrTypeId>(initialType || "url");
   const [design, setDesign] = useState<QrDesign>(DEFAULT_DESIGN);
   const [data, setData] = useState("");
   const [name, setName] = useState("URL QR");
@@ -177,10 +177,11 @@ export function QrWorkspace() {
     return { label: "Ready — run a scan test before print", tone: "muted" as const };
   }, [data, validation]);
 
+  const Tag = headingLevel as "h1" | "h2";
   return (
     <div className="space-y-6">
       <div className="flex flex-col gap-1">
-        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">QR Code Generator</h2>
+        <Tag className="text-2xl font-bold tracking-tight sm:text-3xl">QR Code Generator</Tag>
         <p className="text-muted-foreground">12 content types · custom designer · logo · PNG / SVG / PDF · 100% free, no watermark.</p>
       </div>
 

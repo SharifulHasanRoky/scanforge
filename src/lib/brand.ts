@@ -20,7 +20,10 @@ export type View =
   | "bulk"
   | "dashboard"
   | "learn"
-  | "about";
+  | "about"
+  | "wifi-qr"
+  | "vcard-qr"
+  | "whatsapp-qr";
 
 export const NAV_ITEMS: { label: string; view: View; desc: string }[] = [
   { label: "Home", view: "home", desc: "Overview of both workspaces" },
