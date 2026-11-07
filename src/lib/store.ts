@@ -114,6 +114,9 @@ export function initHashSync() {
       "wifi-qr",
       "vcard-qr",
       "whatsapp-qr",
+      "email-qr",
+      "phone-qr",
+      "location-qr",
     ];
     const view = (valid as string[]).includes(raw) ? (raw as View) : "home";
     if (useApp.getState().view !== view) {

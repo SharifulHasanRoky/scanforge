@@ -71,6 +71,9 @@ export default function Home() {
         {view === "wifi-qr" && renderQrTypeView("wifi-qr")}
         {view === "vcard-qr" && renderQrTypeView("vcard-qr")}
         {view === "whatsapp-qr" && renderQrTypeView("whatsapp-qr")}
+        {view === "email-qr" && renderQrTypeView("email-qr")}
+        {view === "phone-qr" && renderQrTypeView("phone-qr")}
+        {view === "location-qr" && renderQrTypeView("location-qr")}
 
         {view === "bulk" && <BulkWorkspace />}
         {view === "dashboard" && <Dashboard />}

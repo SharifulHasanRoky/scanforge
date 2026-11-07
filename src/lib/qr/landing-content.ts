@@ -137,6 +137,119 @@ export const QR_LANDING_CONTENT: Record<string, QrLandingContent> = {
       { q: "Can I add my logo to a WhatsApp QR code?", a: "Yes. Upload a PNG, JPG or SVG logo in the Design tab. Keep the logo under 30% of the code area and raise error correction to level Q or H so the code stays scannable. We automatically hide the dots behind the logo." },
     ],
   },
+  "email-qr": {
+    typeId: "email",
+    slug: "email-qr",
+    primaryKeyword: "email qr code generator",
+    h1: "Free Email QR Code Generator",
+    metaDescription:
+      "Free email QR code generator. Create a QR code that opens an email to your address with subject and body pre-filled. Download PNG/SVG/PDF. No signup, no watermark, no daily limit.",
+    subtitle:
+      "Let people email you with one scan. Generate an email QR code with recipient, subject and body pre-filled — perfect for flyers, packaging and support materials.",
+    whatIs: [
+      "An email QR code is a QR code that encodes a mailto: URI — when scanned, it opens the user's default email app with the recipient address, subject line and message body pre-filled. The user just reviews and taps send, eliminating the need to type an email address or remember it later.",
+      "The mailto: format supports three fields: the recipient address, an optional subject parameter and an optional body parameter. ScanForge builds the URI for you from a simple form, so the resulting QR code works with iOS Mail, Gmail, Outlook and every major email client.",
+      "Email QR codes are static — the mailto link is encoded directly in the image, so the code never expires and needs no server. They are ideal for printed materials where a clickable email link is impossible: flyers, business cards, product packaging, posters and manuals.",
+    ],
+    useCases: [
+      { title: "Printed flyers & posters", body: "Add an email QR to print materials so prospects contact you without typing your address — high-intent leads with zero friction." },
+      { title: "Product packaging", body: "Put an email QR on packaging with a pre-filled subject like 'Feedback about [product]' so customers reach the right inbox." },
+      { title: "Business cards", body: "Combine a vCard QR with an email QR so contacts can both save your details and email you instantly." },
+      { title: "Support & manuals", body: "Print an email QR in user manuals and support docs with a pre-filled subject so tickets arrive categorised." },
+      { title: "Real estate signage", body: "Add an email QR to property boards with a subject referencing the listing so enquiries are easy to track." },
+      { title: "Events & conferences", body: "Display an email QR on slides and handouts so attendees contact organisers with a pre-filled subject line." },
+    ],
+    howTo: [
+      { step: "Open the email QR generator", text: "Go to the QR generator and select the Email content type from the type selector." },
+      { step: "Enter recipient and subject", text: "Type the email address that should receive messages, plus an optional subject line — e.g. 'Support request' so replies arrive categorised." },
+      { step: "Add a pre-filled body (optional)", text: "Write a default message body so the user only edits it before sending. Leave empty for a blank email." },
+      { step: "Download and place", text: "Export as PNG for screens, SVG for vector, or PDF for print. Add the QR to flyers, packaging or business cards." },
+    ],
+    faqs: [
+      { q: "How do I create an email QR code for free?", a: "Open the email QR generator, enter the recipient address, add an optional subject and body, then download the QR as PNG, SVG or PDF. When scanned, it opens the user's email app with everything pre-filled — completely free, no signup, no watermark." },
+      { q: "Does an email QR code open Gmail, Outlook or Apple Mail?", a: "It opens whichever email app the user has set as default on their phone — Gmail, Outlook, Apple Mail, Spark and others all handle the mailto: format. On desktop it opens the default mail client or prompts to choose one." },
+      { q: "Can I pre-fill the subject and message body?", a: "Yes. Add a subject line and body text in the generator, and the QR encodes them as parameters of the mailto: link. When scanned, the email opens with the recipient, subject and body already filled — the user just reviews and sends." },
+      { q: "Is an email QR code safe to print publicly?", a: "Generally yes — the QR encodes your email address, which is already public on your website. Be aware that a publicly visible address can attract spam over time; many businesses use a dedicated contact address (e.g. info@yourdomain) rather than a personal inbox." },
+      { q: "Does the email QR code expire?", a: "No. ScanForge generates static email QR codes — the mailto link is encoded directly in the image and never expires on our side. The QR keeps working as long as the recipient email address stays active." },
+      { q: "Can I add my logo to an email QR code?", a: "Yes. Upload a PNG, JPG or SVG logo in the Design tab. Keep the logo under 30% of the code area and raise error correction to level Q or H so the code stays scannable. We automatically hide the dots behind the logo." },
+    ],
+  },
+
+  "phone-qr": {
+    typeId: "phone",
+    slug: "phone-qr",
+    primaryKeyword: "phone qr code generator",
+    h1: "Free Phone Number QR Code Generator",
+    metaDescription:
+      "Free phone QR code generator. Create a QR code that starts a phone call to your number with one scan. Download PNG/SVG/PDF. No signup, no watermark, no daily limit.",
+    subtitle:
+      "Make calling you effortless. Generate a phone QR code that starts a call with one scan — ideal for storefronts, vehicles, packaging and support materials.",
+    whatIs: [
+      "A phone QR code is a QR code that encodes a tel: URI — when scanned, the phone immediately offers to start a call to the encoded number. The user confirms and the dialer opens with the number pre-filled, removing the need to read, remember or type a phone number.",
+      "The tel: format is supported universally by iOS and Android. ScanForge encodes the number in international format (with country code), which is the recommended approach for printed materials that may be scanned by international visitors.",
+      "Phone QR codes are static — the tel link is encoded directly in the image, so the code never expires and needs no server. They work best in physical locations where a customer is likely to want to call: shop windows, vehicle wraps, product packaging and support documents.",
+    ],
+    useCases: [
+      { title: "Shop windows & storefronts", body: "Display a phone QR on your window so passers-by call you instantly during or after opening hours." },
+      { title: "Vehicle & fleet branding", body: "Print a phone QR on vans and delivery vehicles so prospects call while your brand is on the move." },
+      { title: "Product packaging", body: "Add a phone QR for support hotlines so customers call the right department with one scan." },
+      { title: "Business cards", body: "Pair a vCard QR with a phone QR so contacts can save your number or call you immediately." },
+      { title: "Property & real estate", body: "Put a phone QR on yard signs so interested buyers call the agent about the specific listing." },
+      { title: "Emergency & service info", body: "Add a phone QR to equipment, machinery and facilities so users reach service or emergency contacts instantly." },
+    ],
+    howTo: [
+      { step: "Open the phone QR generator", text: "Go to the QR generator and select the Phone Call content type from the type selector." },
+      { step: "Enter the phone number", text: "Type the number including the country code (e.g. +1 555 0100) so international visitors can call too." },
+      { step: "Customise the design (optional)", text: "Change colours, dot pattern, or add a logo — e.g. your brand mark. Raise error correction to Q or H if you add a logo." },
+      { step: "Download and print", text: "Export as PNG for screens, SVG for vector, or PDF for print. Place the QR where callers can scan it easily." },
+    ],
+    faqs: [
+      { q: "How do I create a QR code for a phone number?", a: "Open the phone QR generator, enter the number including the country code (e.g. +1 555 0100), then download the QR as PNG, SVG or PDF. When scanned, the phone offers to start a call to that number with one tap — completely free, no signup, no watermark." },
+      { q: "Should I include the country code in a phone QR code?", a: "Yes, always include the country code. The tel: format works best with the full international number, and printed QR codes are often scanned by international visitors who cannot dial local short numbers." },
+      { q: "Does a phone QR code start the call automatically?", a: "No — and this is a safety feature. Scanning opens the dialer with the number pre-filled and the user confirms the call with a tap. The phone never dials without explicit user action." },
+      { q: "Does the phone QR code work on iPhone and Android?", a: "Yes. The tel: URI format is supported by all modern iOS and Android devices. Scanning opens the native dialer with the number pre-filled, ready to call." },
+      { q: "Does the phone QR code expire?", a: "No. ScanForge generates static phone QR codes — the tel link is encoded directly in the image and never expires on our side. The QR keeps working as long as the phone number stays active." },
+      { q: "Can I add my logo to a phone QR code?", a: "Yes. Upload a PNG, JPG or SVG logo in the Design tab. Keep the logo under 30% of the code area and raise error correction to level Q or H so the code stays scannable. We automatically hide the dots behind the logo." },
+    ],
+  },
+
+  "location-qr": {
+    typeId: "location",
+    slug: "location-qr",
+    primaryKeyword: "location qr code generator",
+    h1: "Free Location QR Code Generator",
+    metaDescription:
+      "Free location QR code generator. Create a QR code that opens Google Maps at your address or coordinates. Download PNG/SVG/PDF. No signup, no watermark, no daily limit.",
+    subtitle:
+      "Guide people straight to your door. Generate a location QR code that opens Google Maps at your address or coordinates — free, no signup, no watermark.",
+    whatIs: [
+      "A location QR code is a QR code that encodes a Google Maps link — when scanned, it opens Maps centred on your address or coordinates with directions one tap away. It removes the most common navigation friction: typing an address into a maps app.",
+      "ScanForge supports two input modes: a plain search query (e.g. an address or place name) or exact latitude and longitude coordinates. Coordinates are the most precise option and are recommended for venues that are hard to find by name, such as new buildings or rural locations.",
+      "Location QR codes are static — the Maps link is encoded directly in the image, so the code never expires and needs no server. They are ideal for storefronts, event venues, hotel rooms, delivery notes and tourist information.",
+    ],
+    useCases: [
+      { title: "Storefronts & offices", body: "Display a location QR at your entrance so visitors open directions to your exact door with one scan." },
+      { title: "Events & weddings", body: "Add a location QR on invitations so guests navigate straight to the venue without typing the address." },
+      { title: "Hotels & hospitality", body: "Place a location QR in confirmation emails and room cards so guests find annexes, pools and parking." },
+      { title: "Delivery & logistics", body: "Print a location QR on delivery notes so drivers and customers locate drop-off points precisely." },
+      { title: "Tourism & attractions", body: "Add location QRs to maps and brochures so tourists navigate between attractions effortlessly." },
+      { title: "Real estate & listings", body: "Put a location QR on property signs so buyers navigate to the exact plot or building." },
+    ],
+    howTo: [
+      { step: "Open the location QR generator", text: "Go to the QR generator and select the Location content type from the type selector." },
+      { step: "Enter your address or coordinates", text: "Type a search query (address or place name), or enter exact latitude and longitude for maximum precision." },
+      { step: "Customise the design (optional)", text: "Change colours, dot pattern, or add a logo — e.g. your brand mark or a pin icon. Raise error correction to Q or H if you add a logo." },
+      { step: "Download and place", text: "Export as PNG for screens, SVG for vector, or PDF for print. Add the QR to signage, invitations and packaging." },
+    ],
+    faqs: [
+      { q: "How do I create a QR code for my location?", a: "Open the location QR generator, type your address or place name (or enter exact latitude and longitude), then download the QR as PNG, SVG or PDF. When scanned, it opens Google Maps centred on your location with directions one tap away — completely free, no signup, no watermark." },
+      { q: "Should I use an address or GPS coordinates?", a: "Coordinates are the most precise option — recommended for new buildings, rural venues and places Google may not index yet. An address search query is easier to maintain and works well for well-known places. For maximum reliability, use coordinates." },
+      { q: "Does the location QR code work with Apple Maps?", a: "The QR encodes a Google Maps link, which opens in Google Maps if installed. On iPhones without Google Maps, the link opens in the browser and offers to open Apple Maps. Both paths lead the user to the same destination." },
+      { q: "Does the location QR code expire?", a: "No. ScanForge generates static location QR codes — the Maps link is encoded directly in the image and never expires on our side. The QR keeps working as long as the destination exists on Google Maps." },
+      { q: "Can I track how many people scanned my location QR?", a: "A static location QR cannot track scans — the link is encoded directly in the image with no redirect server. For scan analytics you would need a dynamic QR service, which requires backend infrastructure to maintain the redirect URLs." },
+      { q: "Can I add my logo to a location QR code?", a: "Yes. Upload a PNG, JPG or SVG logo in the Design tab. Keep the logo under 30% of the code area and raise error correction to level Q or H so the code stays scannable. We automatically hide the dots behind the logo." },
+    ],
+  },
 };
 
 export const QR_LANDING_VIEWS = Object.keys(QR_LANDING_CONTENT) as string[];

@@ -20,6 +20,7 @@ export function Header() {
   const navIcon: Record<View, React.ComponentType<{ className?: string }>> = {
     home: QrCode, qr: QrCode, barcode: Barcode, bulk: Layers, dashboard: LayoutDashboard, learn: BookOpen, about: UserRound,
     "wifi-qr": QrCode, "vcard-qr": QrCode, "whatsapp-qr": QrCode,
+    "email-qr": QrCode, "phone-qr": QrCode, "location-qr": QrCode,
   };
 
   const links = (

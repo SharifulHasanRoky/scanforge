@@ -165,11 +165,14 @@ export function Homepage() {
             <p className="mt-1 text-muted-foreground">Dedicated pages with guides, use cases and FAQs for each QR type.</p>
           </div>
         </div>
-        <div className="mt-6 grid gap-3 sm:grid-cols-3">
+        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {[
             { slug: "wifi-qr", label: "Wi-Fi QR Code Generator", desc: "Share network credentials — guests scan and connect instantly." },
             { slug: "vcard-qr", label: "vCard QR Code Generator", desc: "Share contact details as a scannable digital business card." },
             { slug: "whatsapp-qr", label: "WhatsApp QR Code Generator", desc: "Open a WhatsApp chat with a pre-filled message." },
+            { slug: "email-qr", label: "Email QR Code Generator", desc: "Open an email with recipient, subject and body pre-filled." },
+            { slug: "phone-qr", label: "Phone QR Code Generator", desc: "Start a phone call to your number with one scan." },
+            { slug: "location-qr", label: "Location QR Code Generator", desc: "Open Google Maps at your address or coordinates." },
           ].map((p) => (
             <button
               key={p.slug}
