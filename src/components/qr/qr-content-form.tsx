@@ -27,6 +27,7 @@ import {
   type EventPayload,
   type AppPayload,
 } from "@/lib/qr/types";
+import { BRAND } from "@/lib/brand";
 
 type Props = {
   type: QrTypeId;
@@ -45,7 +46,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 
 export function QrContentForm({ type, onData, seed }: Props) {
   // Per-type state so switching types preserves entries.
-  const [url, setUrl] = useState("https://scanforge.app");
+  const [url, setUrl] = useState<string>(BRAND.url);
   const [text, setText] = useState("ScanForge — free QR & barcode workspace.");
   const [wifi, setWifi] = useState<WifiPayload>({
     ssid: "MyNetwork",
@@ -60,7 +61,7 @@ export function QrContentForm({ type, onData, seed }: Props) {
     title: "Founder",
     phone: "+1 555 0100",
     email: "ada@example.com",
-    url: "https://scanforge.app",
+    url: BRAND.url as string,
     address: "221B Baker St, London",
   });
   const [email, setEmail] = useState<EmailPayload>({ to: "", subject: "", body: "" });
@@ -92,10 +93,24 @@ export function QrContentForm({ type, onData, seed }: Props) {
     let data = "";
     let name = "";
     switch (type) {
-      case "url":
-        data = normalizeUrl(url);
-        name = url ? new URL(normalizeUrl(url)).hostname.replace(/^www\./, "") : "URL QR";
+      case "url": {
+        const normalized = normalizeUrl(url);
+        data = normalized;
+        // Safer hostname extraction: new URL() throws on partial input
+        // like "https://" or whitespace-only, which previously crashed the
+        // whole workspace with a client-side exception.
+        let hostname = "URL QR";
+        if (normalized) {
+          try {
+            const h = new URL(normalized).hostname.replace(/^www\./, "");
+            if (h) hostname = h;
+          } catch {
+            hostname = url.trim() || "URL QR";
+          }
+        }
+        name = hostname;
         break;
+      }
       case "text":
         data = text;
         name = text ? text.slice(0, 24) : "Text QR";
@@ -256,7 +271,7 @@ export function QrContentForm({ type, onData, seed }: Props) {
             </Select>
           </Field>
           <Field label="Username or handle">
-            <Input value={social.handle} onChange={(e) => setSocial({ ...social, handle: e.target.value })} placeholder="scanforge" />
+            <Input value={social.handle} onChange={(e) => setSocial({ ...social, handle: e.target.value })} placeholder="your-handle" />
           </Field>
         </div>
       );

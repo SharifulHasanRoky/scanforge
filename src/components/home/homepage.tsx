@@ -8,7 +8,7 @@ import {
   QrCode, Barcode, Layers, ShieldCheck, Zap, Gift, Globe, Eye,
   ArrowRight, CheckCircle2, Sparkles, Type as TypeIcon, Search,
 } from "lucide-react";
-import { BRAND, PLATFORM_FACTS } from "@/lib/brand";
+import { BRAND, PLATFORM_FACTS, type View } from "@/lib/brand";
 import { useApp } from "@/lib/store";
 import { JsonLd, organizationSchema, webApplicationSchema, websiteSchema, faqSchema, breadcrumbSchema, howToSchema } from "@/lib/seo";
 import { HOME_FAQS } from "@/lib/faqs";
@@ -176,7 +176,7 @@ export function Homepage() {
           ].map((p) => (
             <button
               key={p.slug}
-              onClick={() => setView(p.slug as typeof view)}
+              onClick={() => setView(p.slug as View)}
               className="group rounded-xl border border-border bg-card p-5 text-left transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-md"
             >
               <QrCode className="h-6 w-6 text-brand" />

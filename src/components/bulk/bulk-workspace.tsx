@@ -21,6 +21,7 @@ import { BARCODE_FORMATS, validateFormat, type BarcodeFormat } from "@/lib/barco
 import { normalizeUrl } from "@/lib/qr/types";
 import { DEFAULT_DESIGN } from "@/lib/qr/designer";
 import { blobToDataUrl } from "@/lib/qr/export";
+import { BRAND } from "@/lib/brand";
 import { useApp } from "@/lib/store";
 
 type CodeKind = "qr" | "barcode";
@@ -35,7 +36,7 @@ export function BulkWorkspace() {
   const [kind, setKind] = useState<CodeKind>("qr");
   const [qrMode, setQrMode] = useState<"url" | "text">("url");
   const [barcodeFormat, setBarcodeFormat] = useState<BarcodeFormat>(BARCODE_FORMATS[0]);
-  const [raw, setRaw] = useState("https://scanforge.app\nhttps://example.com\nhttps://openai.com");
+  const [raw, setRaw] = useState(`${BRAND.url}\nhttps://example.com\nhttps://openai.com`);
   const [filenameCol, setFilenameCol] = useState("0");
   const [prefix, setPrefix] = useState("");
   const [suffix, setSuffix] = useState("");

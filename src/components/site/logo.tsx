@@ -6,7 +6,7 @@ export function Logo({ size = 28 }: { size?: number }) {
   return (
     <span className="inline-flex items-center gap-2">
       <svg width={size} height={size} viewBox="0 0 40 40" fill="none" role="img" aria-label={`${BRAND.name} logo`}>
-        <title>{BRAND.name} logo</title>
+        <title>{`${BRAND.name} logo`}</title>
         <rect width="40" height="40" rx="10" fill="url(#sf-logo-g)" />
         <defs>
           <linearGradient id="sf-logo-g" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
