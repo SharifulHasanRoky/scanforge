@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,9 +9,18 @@ import {
   QrCode, Barcode, Layers, ShieldCheck, Zap, Gift, Globe, Eye,
   ArrowRight, CheckCircle2, Sparkles, Type as TypeIcon, Search,
 } from "lucide-react";
-import { BRAND, PLATFORM_FACTS, type View } from "@/lib/brand";
-import { useApp } from "@/lib/store";
-import { JsonLd, organizationSchema, webApplicationSchema, websiteSchema, faqSchema, breadcrumbSchema, howToSchema } from "@/lib/seo";
+import { BRAND, PLATFORM_FACTS } from "@/lib/brand";
+import { useNav } from "@/lib/nav";
+import {
+  JsonLd,
+  organizationSchema,
+  webApplicationSchema,
+  softwareApplicationSchema,
+  websiteSchema,
+  faqSchema,
+  breadcrumbSchema,
+  howToSchema,
+} from "@/lib/seo";
 import { HOME_FAQS } from "@/lib/faqs";
 
 const ADVANTAGES = [
@@ -51,13 +61,14 @@ const HOW_TO_STEPS = [
 ];
 
 export function Homepage() {
-  const setView = useApp((s) => s.setView);
+  const nav = useNav();
 
   return (
     <article>
       <JsonLd data={[
         organizationSchema(),
         webApplicationSchema(),
+        softwareApplicationSchema(),
         websiteSchema(),
         faqSchema(HOME_FAQS),
         breadcrumbSchema([{ name: "Home", path: "" }]),
@@ -81,8 +92,8 @@ export function Homepage() {
 
           {/* Two big service cards */}
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            <button
-              onClick={() => setView("qr")}
+            <Link
+              href="/qr"
               className="group relative overflow-hidden rounded-2xl border border-brand/30 bg-card p-8 text-left shadow-sm transition-all hover:-translate-y-1 hover:border-brand hover:shadow-xl"
             >
               <div className="absolute right-0 top-0 h-32 w-32 translate-x-12 -translate-y-12 rounded-full bg-brand/10 blur-2xl" aria-hidden />
@@ -104,10 +115,10 @@ export function Homepage() {
                 </div>
                 <p className="mt-5 text-sm font-semibold brand-text">Open QR generator →</p>
               </div>
-            </button>
+            </Link>
 
-            <button
-              onClick={() => setView("barcode")}
+            <Link
+              href="/barcode"
               className="group relative overflow-hidden rounded-2xl border border-highlight/40 bg-card p-8 text-left shadow-sm transition-all hover:-translate-y-1 hover:border-highlight hover:shadow-xl"
             >
               <div className="absolute right-0 top-0 h-32 w-32 translate-x-12 -translate-y-12 rounded-full bg-highlight/10 blur-2xl" aria-hidden />
@@ -129,14 +140,14 @@ export function Homepage() {
                 </div>
                 <p className="mt-5 text-sm font-semibold text-highlight">Open barcode generator →</p>
               </div>
-            </button>
+            </Link>
           </div>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Button variant="outline" onClick={() => setView("bulk")}>
+            <Button variant="outline" onClick={() => nav("bulk")}>
               <Layers className="mr-2 h-4 w-4" /> Bulk generate
             </Button>
-            <Button variant="ghost" onClick={() => setView("learn")}>
+            <Button variant="ghost" onClick={() => nav("learn")}>
               <TypeIcon className="mr-2 h-4 w-4" /> Learn how it works
             </Button>
           </div>
@@ -173,10 +184,15 @@ export function Homepage() {
             { slug: "email-qr", label: "Email QR Code Generator", desc: "Open an email with recipient, subject and body pre-filled." },
             { slug: "phone-qr", label: "Phone QR Code Generator", desc: "Start a phone call to your number with one scan." },
             { slug: "location-qr", label: "Location QR Code Generator", desc: "Open Google Maps at your address or coordinates." },
+            { slug: "text-qr", label: "Text QR Code Generator", desc: "Encode notes, instructions or serial numbers as a scannable QR." },
+            { slug: "sms-qr", label: "SMS QR Code Generator", desc: "Open a pre-filled SMS with your number and a ready-to-send body." },
+            { slug: "social-qr", label: "Social Media QR Code Generator", desc: "One QR that links to your Instagram, TikTok, YouTube or X profile." },
+            { slug: "event-qr", label: "Event QR Code Generator", desc: "Add your event to a phone calendar with one scan." },
+            { slug: "app-qr", label: "App Download QR Code Generator", desc: "Route iPhone users to the App Store and Android users to Google Play." },
           ].map((p) => (
-            <button
+            <Link
               key={p.slug}
-              onClick={() => setView(p.slug as View)}
+              href={`/${p.slug}`}
               className="group rounded-xl border border-border bg-card p-5 text-left transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-md"
             >
               <QrCode className="h-6 w-6 text-brand" />
@@ -185,7 +201,7 @@ export function Homepage() {
               <p className="mt-3 text-xs font-semibold brand-text inline-flex items-center gap-1">
                 Open <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
               </p>
-            </button>
+            </Link>
           ))}
         </div>
       </section>
@@ -323,13 +339,13 @@ export function Homepage() {
             <h2 className="text-2xl font-bold sm:text-3xl">Start creating in seconds</h2>
             <p className="mx-auto mt-2 max-w-xl text-white/90">No account, no watermark, no daily limit. Just open a tool and generate.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Button size="lg" variant="secondary" onClick={() => setView("qr")}>
+              <Button size="lg" variant="secondary" onClick={() => nav("qr")}>
                 <QrCode className="mr-2 h-5 w-5" /> QR generator
               </Button>
-              <Button size="lg" variant="secondary" onClick={() => setView("barcode")}>
+              <Button size="lg" variant="secondary" onClick={() => nav("barcode")}>
                 <Barcode className="mr-2 h-5 w-5" /> Barcode generator
               </Button>
-              <Button size="lg" variant="secondary" onClick={() => setView("bulk")}>
+              <Button size="lg" variant="secondary" onClick={() => nav("bulk")}>
                 <Layers className="mr-2 h-5 w-5" /> Bulk generator
               </Button>
             </div>

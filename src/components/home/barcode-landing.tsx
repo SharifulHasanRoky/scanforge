@@ -9,7 +9,7 @@ import {
   Layers, ScanLine, AlertTriangle,
 } from "lucide-react";
 import { BARCODE_FORMATS } from "@/lib/barcode/formats";
-import { useApp } from "@/lib/store";
+import { useNav } from "@/lib/nav";
 import { JsonLd, webApplicationSchema, faqSchema, breadcrumbSchema } from "@/lib/seo";
 import { BARCODE_FAQS } from "@/lib/faqs";
 
@@ -57,7 +57,7 @@ const USE_CASES = [
 const FAQS = BARCODE_FAQS;
 
 export function BarcodeLanding() {
-  const setView = useApp((s) => s.setView);
+  const setView = useNav();
 
   const scrollToTool = () => {
     document.getElementById("barcode-tool")?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -70,7 +70,7 @@ export function BarcodeLanding() {
         faqSchema(BARCODE_FAQS),
         breadcrumbSchema([
           { name: "Home", path: "" },
-          { name: "Barcode Generator", path: "#barcode" },
+          { name: "Barcode Generator", path: "/barcode" },
         ]),
       ]} />
       {/* HERO */}

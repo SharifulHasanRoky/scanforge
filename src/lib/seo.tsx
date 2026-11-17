@@ -103,6 +103,63 @@ export function howToSchema(name: string, steps: { step: string; text: string }[
   };
 }
 
+// A WebPage node with breadcrumb and publisher — emitted per route to give
+// every URL a distinct @id and lastReviewed signal that search/AI engines can
+// cite. `path` is the canonical path of the route (relative to BRAND.url).
+export function webPageSchema(opts: {
+  path: string;
+  name: string;
+  description: string;
+  breadcrumb?: { name: string; path: string }[];
+}) {
+  const url = `${SITE}${opts.path}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": url,
+    url,
+    name: opts.name,
+    description: opts.description,
+    isPartOf: { "@type": "WebSite", name: BRAND.name, url: SITE },
+    publisher: { "@type": "Organization", name: BRAND.name, url: SITE, logo: `${SITE}/logo.svg` },
+    inLanguage: "en",
+    ...(opts.breadcrumb
+      ? { breadcrumb: breadcrumbSchema(opts.breadcrumb) }
+      : {}),
+  };
+}
+
+// SoftwareApplication with an Offer of $0. Distinct from WebApplication (the
+// broader utility-app schema) and tends to be richer in rich-result surfacing.
+export function softwareApplicationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: BRAND.name,
+    url: SITE,
+    description: BRAND.subheadline,
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Web (any modern browser)",
+    browserRequirements: "Requires JavaScript and HTML5 canvas.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      description: "Free forever. No watermark. No signup required for generation.",
+      availability: "https://schema.org/InStock",
+    },
+    featureList: [
+      "QR code generator — 12 content types (URL, Wi-Fi, vCard, WhatsApp, event, etc.)",
+      "Barcode generator — 15 formats (EAN-13, UPC-A, Code 128, Data Matrix, PDF417, Aztec)",
+      "Custom QR designer with logo upload, gradients and dot patterns",
+      "Bulk QR & barcode generator with CSV import and ZIP / label-sheet PDF export",
+      "PNG, SVG and PDF export",
+      "Optional user accounts for saving and organising codes",
+    ],
+    publisher: { "@type": "Organization", name: BRAND.name, url: SITE },
+  };
+}
+
 // Injects a JSON-LD script tag into the page head. Call from a client component.
 export function JsonLd({ data }: { data: object | object[] }) {
   const items = Array.isArray(data) ? data : [data];

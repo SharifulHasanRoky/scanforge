@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Loader2, ShieldCheck } from "lucide-react";
 import { useApp } from "@/lib/store";
+import { useNav } from "@/lib/nav";
 
 export function AuthModal() {
   const open = useApp((s) => s.signupOpen);
@@ -16,7 +17,7 @@ export function AuthModal() {
   const setUser = useApp((s) => s.setUser);
   const dismissPopup = useApp((s) => s.dismissPopup);
   const guestCodes = useApp((s) => s.guestCodes);
-  const setView = useApp((s) => s.setView);
+  const nav = useNav();
 
   const [tab, setTab] = useState<"signup" | "login">("signup");
   const [loading, setLoading] = useState(false);
@@ -51,11 +52,11 @@ export function AuthModal() {
         setTimeout(() => {
           toast(`You have ${guestCodes.length} codes from this session. Save them to your account from the dashboard.`, {
             duration: 6000,
-            action: { label: "Open dashboard", onClick: () => setView("dashboard") },
+            action: { label: "Open dashboard", onClick: () => nav("dashboard") },
           });
         }, 600);
       }
-      setView("dashboard");
+      nav("dashboard");
     } catch (e) {
       toast.error(e instanceof Error ? e.message : "Could not continue");
     } finally {

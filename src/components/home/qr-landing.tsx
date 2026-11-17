@@ -10,7 +10,7 @@ import {
   Zap, Image as ImageIcon, FileDown, CheckCircle2, ArrowDown,
 } from "lucide-react";
 import { QR_TYPES } from "@/lib/qr/types";
-import { useApp } from "@/lib/store";
+import { useNav } from "@/lib/nav";
 import { JsonLd, webApplicationSchema, faqSchema, breadcrumbSchema } from "@/lib/seo";
 import { QR_FAQS } from "@/lib/faqs";
 
@@ -39,7 +39,7 @@ const USE_CASES = [
 const FAQS = QR_FAQS;
 
 export function QrLanding() {
-  const setView = useApp((s) => s.setView);
+  const nav = useNav();
 
   const scrollToTool = () => {
     document.getElementById("qr-tool")?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -52,7 +52,7 @@ export function QrLanding() {
         faqSchema(QR_FAQS),
         breadcrumbSchema([
           { name: "Home", path: "" },
-          { name: "QR Generator", path: "#qr" },
+          { name: "QR Generator", path: "/qr" },
         ]),
       ]} />
       {/* HERO */}
@@ -71,7 +71,7 @@ export function QrLanding() {
               <Button size="lg" onClick={scrollToTool}>
                 <QrCode className="mr-2 h-5 w-5" /> Start generating
               </Button>
-              <Button size="lg" variant="outline" onClick={() => setView("bulk")}>
+              <Button size="lg" variant="outline" onClick={() => nav("bulk")}>
                 Bulk QR generator
               </Button>
             </div>
@@ -169,7 +169,7 @@ export function QrLanding() {
             </div>
             <div className="flex gap-2">
               <Button onClick={scrollToTool}>Open generator</Button>
-              <Button variant="outline" onClick={() => setView("barcode")}>Try barcodes</Button>
+              <Button variant="outline" onClick={() => nav("barcode")}>Try barcodes</Button>
             </div>
           </div>
         </div>

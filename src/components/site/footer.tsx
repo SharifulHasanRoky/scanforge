@@ -1,12 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { Logo } from "@/components/site/logo";
 import { BRAND, NAV_ITEMS, PLATFORM_FACTS } from "@/lib/brand";
-import { useApp } from "@/lib/store";
 import { Heart } from "lucide-react";
 
 export function Footer() {
-  const setView = useApp((s) => s.setView);
   return (
     <footer className="mt-auto border-t border-border bg-muted/30">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-4">
@@ -22,7 +21,12 @@ export function Footer() {
           <ul className="mt-3 space-y-2 text-sm">
             {NAV_ITEMS.map((n) => (
               <li key={n.view}>
-                <button onClick={() => setView(n.view)} className="text-muted-foreground hover:text-brand">{n.label}</button>
+                <Link
+                  href={n.view === "home" ? "/" : `/${n.view}`}
+                  className="text-muted-foreground hover:text-brand"
+                >
+                  {n.label}
+                </Link>
               </li>
             ))}
           </ul>

@@ -1,0 +1,15 @@
+{
+  "name": "ScanForge — Free QR & Barcode Generator",
+  "short_name": "ScanForge",
+  "description": "Free QR code and barcode generator. Create, customise and download codes — no signup, no watermark.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#10b981",
+  "icons": [
+    { "src": "/logo.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/favicon-32.png", "type": "image/png", "sizes": "32x32" },
+    { "src": "/favicon-16.png", "type": "image/png", "sizes": "16x16" },
+    { "src": "/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" }
+  ]
+}

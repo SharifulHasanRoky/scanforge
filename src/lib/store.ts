@@ -1,8 +1,12 @@
 "use client";
 
+// Global app state. After the App Router migration the URL is the source of
+// truth for "which page am I on", so the store no longer holds `view`. Use
+// `useNav()` / `useCurrentView()` from `@/lib/nav` for navigation and the
+// current route. The store keeps only user, guest codes and the signup prompt.
+
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import type { View } from "@/lib/brand";
 
 export type GuestCode = {
   id: string;
@@ -15,9 +19,6 @@ export type GuestCode = {
 };
 
 type AppState = {
-  view: View;
-  setView: (v: View) => void;
-
   // Generation counter — first 3 successful generations need no signup.
   genCount: number;
   popupDismissed: boolean;
@@ -45,15 +46,6 @@ type AppState = {
 export const useApp = create<AppState>()(
   persist(
     (set, get) => ({
-      view: "home",
-      setView: (v) => {
-        set({ view: v });
-        if (typeof window !== "undefined") {
-          window.location.hash = v === "home" ? "" : `#${v}`;
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      },
-
       genCount: 0,
       popupDismissed: false,
       signupOpen: false,
@@ -92,37 +84,7 @@ export const useApp = create<AppState>()(
         popupDismissed: s.popupDismissed,
         guestCodes: s.guestCodes,
         user: s.user,
-        view: s.view,
       }),
     }
   )
 );
-
-// Keep the store in sync with the URL hash so deep-links and back/forward work.
-export function initHashSync() {
-  if (typeof window === "undefined") return;
-  const apply = () => {
-    const raw = window.location.hash.replace(/^#/, "").trim();
-    const valid: View[] = [
-      "home",
-      "qr",
-      "barcode",
-      "bulk",
-      "dashboard",
-      "learn",
-      "about",
-      "wifi-qr",
-      "vcard-qr",
-      "whatsapp-qr",
-      "email-qr",
-      "phone-qr",
-      "location-qr",
-    ];
-    const view = (valid as string[]).includes(raw) ? (raw as View) : "home";
-    if (useApp.getState().view !== view) {
-      useApp.setState({ view });
-    }
-  };
-  apply();
-  window.addEventListener("hashchange", apply);
-}

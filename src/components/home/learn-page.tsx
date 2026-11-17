@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, QrCode, Barcode, Wifi, Image as ImageIcon, Printer, Layers, ShieldCheck } from "lucide-react";
-import { useApp } from "@/lib/store";
+import { useNav } from "@/lib/nav";
+import { JsonLd, breadcrumbSchema, organizationSchema } from "@/lib/seo";
 
 const GUIDES = [
   { icon: QrCode, title: "How to create a QR code", body: "Open the QR generator, pick a content type (URL, Wi-Fi, vCard…), fill in the fields and watch the live preview update. Customise colours, dot pattern and logo, then download as PNG, SVG or PDF." },
@@ -17,9 +19,16 @@ const GUIDES = [
 ];
 
 export function LearnPage() {
-  const setView = useApp((s) => s.setView);
+  const nav = useNav();
   return (
     <div className="mx-auto max-w-4xl space-y-8 py-6">
+      <JsonLd data={[
+        organizationSchema(),
+        breadcrumbSchema([
+          { name: "Home", path: "" },
+          { name: "Learn", path: "/learn" },
+        ]),
+      ]} />
       <div>
         <Badge variant="secondary" className="mb-3"><BookOpen className="mr-1.5 h-3.5 w-3.5" /> Learn</Badge>
         <h1 className="text-3xl font-bold tracking-tight">QR &amp; barcode guides</h1>
@@ -40,9 +49,9 @@ export function LearnPage() {
         <h2 className="text-lg font-semibold">Ready to put it into practice?</h2>
         <p className="mt-1 text-sm text-muted-foreground">All tools are free — no signup, no watermark.</p>
         <div className="mt-4 flex flex-wrap gap-3">
-          <button onClick={() => setView("qr")} className="rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium hover:border-brand">Open QR generator</button>
-          <button onClick={() => setView("barcode")} className="rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium hover:border-brand">Open barcode generator</button>
-          <button onClick={() => setView("bulk")} className="rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium hover:border-brand">Bulk generator</button>
+          <Link href="/qr" className="rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium hover:border-brand">Open QR generator</Link>
+          <Link href="/barcode" className="rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium hover:border-brand">Open barcode generator</Link>
+          <button onClick={() => nav("bulk")} className="rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium hover:border-brand">Bulk generator</button>
         </div>
       </Card>
     </div>

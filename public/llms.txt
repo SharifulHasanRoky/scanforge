@@ -47,16 +47,32 @@ Honest, independently presented feature comparison (competitor names belong to t
 - vs Adobe Express: Adobe Express QR is a basic tool; ScanForge adds 12 QR content types, 15 barcode formats, bulk generation and a custom designer.
 - vs GoQR: GoQR is a simple URL-to-QR tool; ScanForge adds logo, gradients, bulk, barcodes and accounts.
 
-## URLs
+## URLs (clean path-based — each is a real indexable route)
 
 - Homepage: https://qrandbarcodegenerator.vercel.app/
-- QR Generator: https://qrandbarcodegenerator.vercel.app/#qr
-- Barcode Generator: https://qrandbarcodegenerator.vercel.app/#barcode
-- Bulk Generator: https://qrandbarcodegenerator.vercel.app/#bulk
-- Learn (guides): https://qrandbarcodegenerator.vercel.app/#learn
-- Dashboard (account): https://qrandbarcodegenerator.vercel.app/#dashboard
+- QR Code Generator: https://qrandbarcodegenerator.vercel.app/qr
+- Barcode Generator: https://qrandbarcodegenerator.vercel.app/barcode
+- Bulk Generator: https://qrandbarcodegenerator.vercel.app/bulk
+- Learn (guides): https://qrandbarcodegenerator.vercel.app/learn
+- About: https://qrandbarcodegenerator.vercel.app/about
+- Wi-Fi QR Code Generator: https://qrandbarcodegenerator.vercel.app/wifi-qr
+- vCard QR Code Generator: https://qrandbarcodegenerator.vercel.app/vcard-qr
+- WhatsApp QR Code Generator: https://qrandbarcodegenerator.vercel.app/whatsapp-qr
+- Email QR Code Generator: https://qrandbarcodegenerator.vercel.app/email-qr
+- Phone QR Code Generator: https://qrandbarcodegenerator.vercel.app/phone-qr
+- Location QR Code Generator: https://qrandbarcodegenerator.vercel.app/location-qr
+- Text QR Code Generator: https://qrandbarcodegenerator.vercel.app/text-qr
+- SMS QR Code Generator: https://qrandbarcodegenerator.vercel.app/sms-qr
+- Social Media QR Code Generator: https://qrandbarcodegenerator.vercel.app/social-qr
+- Event QR Code Generator: https://qrandbarcodegenerator.vercel.app/event-qr
+- App Download QR Code Generator: https://qrandbarcodegenerator.vercel.app/app-qr
 - Sitemap: https://qrandbarcodegenerator.vercel.app/sitemap.xml
 - Robots: https://qrandbarcodegenerator.vercel.app/robots.txt
+- LLMs full index: https://qrandbarcodegenerator.vercel.app/llms-full.txt
+
+## Crawler access
+
+All major search and AI crawlers (Googlebot, Bingbot, GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, Applebot-Extended and others) are explicitly allow-listed in robots.txt. The /api/* routes and the user-private /dashboard route are disallowed.
 
 ## Contact
 
@@ -65,4 +81,4 @@ Honest, independently presented feature comparison (competitor names belong to t
 
 ## Honest scope notes
 
-This is a strong, genuinely-usable MVP. Not yet implemented: dynamic QR (redirect + analytics), dedicated per-keyword SEO landing pages (currently consolidated into the homepage + two landing pages), AdSense placement, GS1 Digital Link QR, camera scanning for QR testing on mobile.
+This is a strong, genuinely-usable MVP. Not yet implemented: dynamic QR (redirect + analytics), AdSense placement, GS1 Digital Link QR, camera scanning for QR testing on mobile.

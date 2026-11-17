@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,7 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import {
   QrCode, ArrowDown, ArrowRight, Search, CheckCircle2, Sparkles,
 } from "lucide-react";
-import { useApp } from "@/lib/store";
+import { useNav } from "@/lib/nav";
 import { JsonLd, webApplicationSchema, faqSchema, breadcrumbSchema, howToSchema } from "@/lib/seo";
 import { QR_LANDING_CONTENT } from "@/lib/qr/landing-content";
 
@@ -15,7 +16,7 @@ type Props = { slug: string };
 
 export function QrTypeLanding({ slug }: Props) {
   const c = QR_LANDING_CONTENT[slug];
-  const setView = useApp((s) => s.setView);
+  const nav = useNav();
   if (!c) return null;
 
   const scrollToTool = () => {
@@ -29,8 +30,8 @@ export function QrTypeLanding({ slug }: Props) {
         faqSchema(c.faqs),
         breadcrumbSchema([
           { name: "Home", path: "" },
-          { name: "QR Generator", path: "#qr" },
-          { name: c.h1.replace(/^Free /, "").replace(/ Generator$/, ""), path: `#${slug}` },
+          { name: "QR Generator", path: "/qr" },
+          { name: c.h1.replace(/^Free /, "").replace(/ Generator$/, ""), path: `/${slug}` },
         ]),
         howToSchema(`How to create a ${c.primaryKeyword.replace(" generator", "")}`, c.howTo),
       ]} />
@@ -49,7 +50,7 @@ export function QrTypeLanding({ slug }: Props) {
               <Button size="lg" onClick={scrollToTool}>
                 <QrCode className="mr-2 h-5 w-5" /> Start generating
               </Button>
-              <Button size="lg" variant="outline" onClick={() => setView("qr")}>
+              <Button size="lg" variant="outline" onClick={() => nav("qr")}>
                 All QR types
               </Button>
             </div>
@@ -115,6 +116,41 @@ export function QrTypeLanding({ slug }: Props) {
         {/* The actual workspace is injected by page.tsx right after this landing, pre-seeded with c.typeId */}
       </section>
 
+      {/* RELATED QR GENERATORS — internal links */}
+      <section className="border-y border-border bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+          <h2 className="text-2xl font-bold sm:text-3xl">Other free QR code generators</h2>
+          <p className="mt-2 text-muted-foreground">All 12 QR content types are free — pick another generator below.</p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {Object.values(QR_LANDING_CONTENT)
+              .filter((x) => x.slug !== slug)
+              .slice(0, 8)
+              .map((x) => (
+                <Link
+                  key={x.slug}
+                  href={`/${x.slug}`}
+                  className="group rounded-xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-md"
+                >
+                  <QrCode className="h-5 w-5 text-brand" />
+                  <h3 className="mt-2 text-sm font-semibold">{x.h1.replace(/^Free /, "").replace(/ Generator$/, "")}</h3>
+                  <p className="mt-1 text-xs text-muted-foreground line-clamp-2">{x.subtitle}</p>
+                  <p className="mt-2 text-[11px] font-semibold brand-text inline-flex items-center gap-1">
+                    Open <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+                  </p>
+                </Link>
+              ))}
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/qr"
+              className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card px-4 py-2 text-sm font-medium hover:border-brand"
+            >
+              <QrCode className="h-4 w-4 text-brand" /> See all 12 QR types
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="border-t border-border bg-muted/30">
         <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
@@ -140,7 +176,7 @@ export function QrTypeLanding({ slug }: Props) {
             </div>
             <div className="flex gap-2">
               <Button onClick={scrollToTool}>Open generator</Button>
-              <Button variant="outline" onClick={() => setView("bulk")}>Bulk generate <ArrowRight className="ml-1.5 h-4 w-4" /></Button>
+              <Button variant="outline" onClick={() => nav("bulk")}>Bulk generate <ArrowRight className="ml-1.5 h-4 w-4" /></Button>
             </div>
           </div>
         </div>

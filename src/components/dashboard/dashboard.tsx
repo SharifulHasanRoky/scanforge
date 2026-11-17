@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { QrCode, Barcode, Trash2, FolderKanban, LogOut, UserCog, Clock, Save, Copy } from "lucide-react";
 import { useApp } from "@/lib/store";
+import { useNav } from "@/lib/nav";
 import { DEFAULT_DESIGN } from "@/lib/qr/designer";
 import { blobToDataUrl } from "@/lib/qr/export";
 
@@ -27,7 +28,8 @@ type SavedCode = {
 };
 
 export function Dashboard() {
-  const { user, openSignup, setView, guestCodes, addGuestCode, logout, setLoadRequest } = useApp();
+  const { user, openSignup, guestCodes, addGuestCode, logout, setLoadRequest } = useApp();
+  const nav = useNav();
   const [codes, setCodes] = useState<SavedCode[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -57,7 +59,7 @@ export function Dashboard() {
     await fetch("/api/auth/logout", { method: "POST" });
     logout();
     toast.success("Signed out");
-    setView("home");
+    nav("home");
   };
 
   const onDeleteAccount = async () => {
@@ -66,7 +68,7 @@ export function Dashboard() {
     if (res.ok) {
       logout();
       toast.success("Account deleted");
-      setView("home");
+      nav("home");
     } else {
       toast.error("Could not delete account");
     }
@@ -94,7 +96,7 @@ export function Dashboard() {
 
   const reopen = (c: SavedCode) => {
     setLoadRequest({ kind: c.kind as "qr" | "barcode", content: c.content, design: JSON.parse(c.design || "{}"), name: c.name });
-    setView(c.kind === "qr" ? "qr" : "barcode");
+    nav(c.kind === "qr" ? "qr" : "barcode");
   };
 
   const qrCodes = codes.filter((c) => c.kind === "qr");
@@ -110,7 +112,7 @@ export function Dashboard() {
           </p>
           <div className="mt-6 flex justify-center gap-3">
             <Button onClick={openSignup}>Sign in / Create account</Button>
-            <Button variant="outline" onClick={() => setView("qr")}>Keep generating free</Button>
+            <Button variant="outline" onClick={() => nav("qr")}>Keep generating free</Button>
           </div>
           {guestCodes.length > 0 && (
             <div className="mt-8 text-left">

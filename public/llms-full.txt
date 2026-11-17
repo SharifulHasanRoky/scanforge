@@ -1,0 +1,95 @@
+# ScanForge — Full LLM Index
+
+> Extended index of every public page on ScanForge with a one-paragraph summary.
+> Use this alongside /llms.txt for the platform-level overview.
+> Base URL: https://qrandbarcodegenerator.vercel.app
+> All pages are free, no signup, no watermark. Static generation runs in the browser.
+
+## Top-level routes
+
+- [Homepage](https://qrandbarcodegenerator.vercel.app/) — Free QR code and barcode generator. Two workspaces (QR + barcode), custom designer, bulk generator, dashboard. Comprehensive FAQ, how-to and comparison sections.
+- [QR Code Generator](https://qrandbarcodegenerator.vercel.app/qr) — 12 QR content types with a custom designer (dot patterns, gradients, logo upload). Live scan-reliability validation. PNG, SVG, PDF export.
+- [Barcode Generator](https://qrandbarcodegenerator.vercel.app/barcode) — 15 barcode formats across retail, general-purpose, industrial and 2D matrix. Live format validation with automatic GS1 check-digit computation. PNG, SVG, PDF export.
+- [Bulk Generator](https://qrandbarcodegenerator.vercel.app/bulk) — Paste a list or import a CSV and generate hundreds of QR or barcode codes at once. ZIP of PNGs or single label-sheet PDF. 100% in-browser processing.
+- [Learn](https://qrandbarcodegenerator.vercel.app/learn) — Short practical guides on creating QR codes, adding logos, generating barcodes, printing and bulk generation.
+- [About](https://qrandbarcodegenerator.vercel.app/about) — ScanForge is a free, browser-first QR code and barcode generator. No signup, no watermark, no daily limits.
+
+## Per-QR-type generators (12 types)
+
+### Free Wi-Fi QR Code Generator
+- URL: https://qrandbarcodegenerator.vercel.app/wifi-qr
+- Primary keyword: wifi qr code generator
+- Summary: Create a QR code for your Wi-Fi network so guests connect instantly — no password typing, no mistakes. Free, no signup, no watermark.
+
+### Free vCard QR Code Generator
+- URL: https://qrandbarcodegenerator.vercel.app/vcard-qr
+- Primary keyword: vcard qr code generator
+- Summary: Share your contact details with one scan. Generate a vCard QR code for business cards, email signatures and networking — free, no signup, no watermark.
+
+### Free WhatsApp QR Code Generator
+- URL: https://qrandbarcodegenerator.vercel.app/whatsapp-qr
+- Primary keyword: whatsapp qr code generator
+- Summary: Let customers start a WhatsApp chat with one scan. Generate a WhatsApp QR code with a pre-filled message for support, sales and contact — free, no signup, no watermark.
+
+### Free Email QR Code Generator
+- URL: https://qrandbarcodegenerator.vercel.app/email-qr
+- Primary keyword: email qr code generator
+- Summary: Let people email you with one scan. Generate an email QR code with recipient, subject and body pre-filled — perfect for flyers, packaging and support materials.
+
+### Free Phone Number QR Code Generator
+- URL: https://qrandbarcodegenerator.vercel.app/phone-qr
+- Primary keyword: phone qr code generator
+- Summary: Make calling you effortless. Generate a phone QR code that starts a call with one scan — ideal for storefronts, vehicles, packaging and support materials.
+
+### Free Location QR Code Generator
+- URL: https://qrandbarcodegenerator.vercel.app/location-qr
+- Primary keyword: location qr code generator
+- Summary: Guide people straight to your door. Generate a location QR code that opens Google Maps at your address or coordinates — free, no signup, no watermark.
+
+### Free Text QR Code Generator
+- URL: https://qrandbarcodegenerator.vercel.app/text-qr
+- Primary keyword: text qr code generator
+- Summary: Encode any plain text — notes, instructions, serial numbers, captions — into a static QR code that scans on every phone. Free, no signup, no watermark.
+
+### Free SMS QR Code Generator
+- URL: https://qrandbarcodegenerator.vercel.app/sms-qr
+- Primary keyword: sms qr code generator
+- Summary: Let people text you with one scan. Generate an SMS QR code that opens a pre-filled message to your number — free, no signup, no watermark.
+
+### Free Social Media QR Code Generator
+- URL: https://qrandbarcodegenerator.vercel.app/social-qr
+- Primary keyword: social media qr code generator
+- Summary: One QR code, every profile. Link to your Instagram, TikTok, YouTube or X handle so followers scan once and connect — free, no signup, no watermark.
+
+### Free Event QR Code Generator
+- URL: https://qrandbarcodegenerator.vercel.app/event-qr
+- Primary keyword: event qr code generator
+- Summary: Let guests add your event to their calendar with one scan. Generate a vEvent QR code with title, date, location and notes — free, no signup, no watermark.
+
+### Free App Download QR Code Generator
+- URL: https://qrandbarcodegenerator.vercel.app/app-qr
+- Primary keyword: app download qr code generator
+- Summary: One QR for both app stores. Generate an app download QR so iPhone users land on the App Store and Android users on Google Play — free, no signup, no watermark.
+
+## Barcode formats (15)
+
+- Retail: EAN-13, EAN-8, UPC-A, UPC-E
+- General-purpose: Code 128, Code 39, Code 93, Codabar, Interleaved 2 of 5, MSI
+- Industrial & shipping: ITF-14, GS1-128
+- 2D matrix: Data Matrix, PDF417, Aztec
+
+## Key facts
+
+- Price: Free forever. No premium plans, no credits, no forced watermark.
+- Signup required: Never for generation. Optional, only for saving codes.
+- Processing: Static QR & barcode generation runs client-side in the browser.
+- Exports: PNG, SVG, PDF, ZIP (bulk).
+- Static vs dynamic QR: ScanForge generates static QR codes only — the destination is encoded directly in the image, no redirect server, no expiry, no account needed.
+- GS1 / GTIN: Generating a barcode image does NOT register an official GS1 identifier. Users must only encode identifiers they are authorised to use. The platform computes and verifies the check digit; official GTIN registration is handled by GS1.
+- Privacy: For static generation, data is not uploaded. Uploaded logos and CSV files stay on the user's device. Only codes explicitly saved to an account are stored server-side.
+
+## Machine-readable companions
+
+- Sitemap: https://qrandbarcodegenerator.vercel.app/sitemap.xml
+- Robots: https://qrandbarcodegenerator.vercel.app/robots.txt
+- Brief LLM index: https://qrandbarcodegenerator.vercel.app/llms.txt

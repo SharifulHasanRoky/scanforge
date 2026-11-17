@@ -26,7 +26,12 @@ export type View =
   | "whatsapp-qr"
   | "email-qr"
   | "phone-qr"
-  | "location-qr";
+  | "location-qr"
+  | "text-qr"
+  | "sms-qr"
+  | "social-qr"
+  | "event-qr"
+  | "app-qr";
 
 export const NAV_ITEMS: { label: string; view: View; desc: string }[] = [
   { label: "Home", view: "home", desc: "Overview of both workspaces" },
