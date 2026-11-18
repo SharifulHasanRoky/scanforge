@@ -7,6 +7,7 @@ import { Homepage } from "@/components/home/homepage";
 import { QrLanding } from "@/components/home/qr-landing";
 import { BarcodeLanding } from "@/components/home/barcode-landing";
 import { QrTypeLanding } from "@/components/home/qr-type-landing";
+import { BarcodeFormatLanding } from "@/components/home/barcode-format-landing";
 import { LearnPage } from "@/components/home/learn-page";
 import { QrWorkspace } from "@/components/qr/qr-workspace";
 import { BarcodeWorkspace } from "@/components/barcode/barcode-workspace";
@@ -14,11 +15,13 @@ import { BulkWorkspace } from "@/components/bulk/bulk-workspace";
 import { Dashboard } from "@/components/dashboard/dashboard";
 import { AuthModal } from "@/components/auth/auth-modal";
 import { QR_LANDING_CONTENT } from "@/lib/qr/landing-content";
+import { BARCODE_LANDING_CONTENT } from "@/lib/barcode/landing-content";
 import { ROUTE_META, APP_ROUTE_VIEWS } from "@/lib/seo/routes";
 
 const QR_TYPE_SLUGS = Object.keys(QR_LANDING_CONTENT);
+const BARCODE_TYPE_SLUGS = Object.keys(BARCODE_LANDING_CONTENT);
 
-const ALL_VIEWS = [...APP_ROUTE_VIEWS, ...QR_TYPE_SLUGS];
+const ALL_VIEWS = [...APP_ROUTE_VIEWS, ...QR_TYPE_SLUGS, ...BARCODE_TYPE_SLUGS];
 
 export function generateStaticParams() {
   return ALL_VIEWS.map((view) => ({ view }));
@@ -30,6 +33,30 @@ export const dynamicParams = false;
 type Params = { params: Promise<{ view: string }> };
 
 function metaFor(view: string): Metadata {
+  // Barcode-format landings have their own content model.
+  const bcContent = BARCODE_LANDING_CONTENT[view];
+  if (bcContent) {
+    const title = bcContent.h1;
+    const description = bcContent.metaDescription;
+    return {
+      title,
+      description,
+      alternates: { canonical: `/${view}` },
+      openGraph: {
+        title,
+        description,
+        url: `${BRAND.url}/${view}`,
+        type: "website",
+        images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        images: ["/og-image.png"],
+      },
+    };
+  }
   // QR-type landings have their own content model.
   const qrContent = QR_LANDING_CONTENT[view];
   if (qrContent) {
@@ -116,6 +143,16 @@ export default async function ViewPage({ params }: Params) {
         <BarcodeLanding />
         <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6">
           <BarcodeWorkspace />
+        </div>
+      </>
+    );
+  } else if (BARCODE_TYPE_SLUGS.includes(view)) {
+    const bc = BARCODE_LANDING_CONTENT[view];
+    content = (
+      <>
+        <BarcodeFormatLanding slug={view} />
+        <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6">
+          <BarcodeWorkspace initialFormatId={bc.formatId} />
         </div>
       </>
     );

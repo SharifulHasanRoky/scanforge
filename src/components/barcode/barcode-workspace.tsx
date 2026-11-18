@@ -22,9 +22,17 @@ import {
 import { downloadCanvasPng, downloadCanvasSvg, downloadCanvasPdf, printCode } from "@/lib/qr/export";
 import { useApp } from "@/lib/store";
 
-export function BarcodeWorkspace() {
-  const [format, setFormat] = useState<BarcodeFormat>(BARCODE_FORMATS[0]);
-  const [value, setValue] = useState("ScanForge-001");
+type Props = { initialFormatId?: string };
+
+export function BarcodeWorkspace({ initialFormatId }: Props = {}) {
+  // Pre-select a format (used by the per-format landing pages). Defaults to
+  // Code 128 exactly like before when no prop is passed.
+  const initialFormat = useMemo(
+    () => BARCODE_FORMATS.find((f) => f.id === initialFormatId) ?? BARCODE_FORMATS[0],
+    [initialFormatId]
+  );
+  const [format, setFormat] = useState<BarcodeFormat>(initialFormat);
+  const [value, setValue] = useState(initialFormat.placeholder);
   const [style, setStyle] = useState<BarcodeStyle>(DEFAULT_BARCODE_STYLE);
   const [filename, setFilename] = useState("scanforge-barcode");
   const [error, setError] = useState<string | null>(null);

@@ -71,6 +71,23 @@
 - Primary keyword: app download qr code generator
 - Summary: One QR for both app stores. Generate an app download QR so iPhone users land on the App Store and Android users on Google Play — free, no signup, no watermark.
 
+## Per-barcode-format generators
+
+### Free EAN-13 Barcode Generator
+- URL: https://qrandbarcodegenerator.vercel.app/ean-13-barcode
+- Primary keyword: ean 13 barcode generator
+- Summary: Create valid EAN-13 retail barcodes with automatic GS1 check-digit validation. Download print-ready PNG, SVG or PDF — free, no signup, no watermark.
+
+### Free UPC-A Barcode Generator
+- URL: https://qrandbarcodegenerator.vercel.app/upc-a-barcode
+- Primary keyword: upc-a barcode generator
+- Summary: Create valid UPC-A retail barcodes (12-digit GTIN-12) with live check-digit validation. Download PNG, SVG or PDF — free, no signup, no watermark.
+
+### Free Code 128 Barcode Generator
+- URL: https://qrandbarcodegenerator.vercel.app/code-128-barcode
+- Primary keyword: code 128 barcode generator
+- Summary: Encode any letters, numbers or symbols in a Code 128 barcode — the logistics and inventory standard. Download PNG, SVG or PDF. Free, no signup, no watermark.
+
 ## Barcode formats (15)
 
 - Retail: EAN-13, EAN-8, UPC-A, UPC-E

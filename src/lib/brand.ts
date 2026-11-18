@@ -31,7 +31,10 @@ export type View =
   | "sms-qr"
   | "social-qr"
   | "event-qr"
-  | "app-qr";
+  | "app-qr"
+  | "ean-13-barcode"
+  | "upc-a-barcode"
+  | "code-128-barcode";
 
 export const NAV_ITEMS: { label: string; view: View; desc: string }[] = [
   { label: "Home", view: "home", desc: "Overview of both workspaces" },

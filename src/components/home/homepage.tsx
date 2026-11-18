@@ -206,6 +206,34 @@ export function Homepage() {
         </div>
       </section>
 
+      {/* POPULAR BARCODE FORMATS — internal links to dedicated landing pages */}
+      <section className="border-t border-border bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+          <h2 className="text-2xl font-bold sm:text-3xl">Popular barcode generators</h2>
+          <p className="mt-1 text-muted-foreground">Dedicated pages with guides, specifications and FAQs for each barcode format.</p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { slug: "ean-13-barcode", label: "EAN-13 Barcode Generator", desc: "The worldwide retail barcode — 13 digits with GS1 check-digit validation." },
+              { slug: "upc-a-barcode", label: "UPC-A Barcode Generator", desc: "The North American retail barcode — 12-digit GTIN-12 for US and Canada." },
+              { slug: "code-128-barcode", label: "Code 128 Barcode Generator", desc: "Full-ASCII logistics barcode for shipping labels, inventory and assets." },
+            ].map((p) => (
+              <Link
+                key={p.slug}
+                href={`/${p.slug}`}
+                className="group rounded-xl border border-border bg-card p-5 text-left transition-all hover:-translate-y-0.5 hover:border-highlight hover:shadow-md"
+              >
+                <Barcode className="h-6 w-6 text-highlight" />
+                <h3 className="mt-2 text-base font-semibold">{p.label}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
+                <p className="mt-3 text-xs font-semibold text-highlight inline-flex items-center gap-1">
+                  Open <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* WHAT IS — AEO definition block */}
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <div className="grid gap-8 lg:grid-cols-2">

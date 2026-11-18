@@ -29,6 +29,9 @@ const HASH_VIEW_REDIRECTS: View[] = [
   "social-qr",
   "event-qr",
   "app-qr",
+  "ean-13-barcode",
+  "upc-a-barcode",
+  "code-128-barcode",
 ];
 
 export function BootProvider({ children }: { children?: React.ReactNode }) {

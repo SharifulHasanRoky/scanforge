@@ -31,6 +31,7 @@ export function Header() {
     "email-qr": QrCode, "phone-qr": QrCode, "location-qr": QrCode,
     "text-qr": QrCode, "sms-qr": QrCode, "social-qr": QrCode,
     "event-qr": QrCode, "app-qr": QrCode,
+    "ean-13-barcode": Barcode, "upc-a-barcode": Barcode, "code-128-barcode": Barcode,
   };
 
   const links = (

@@ -1,9 +1,11 @@
 """Generate public/llms-full.txt — an extended LLM index with one summary per
-page (homepage + 5 top-level routes + 11 QR-type landings).
+page (homepage + 5 top-level routes + 11 QR-type landings + barcode-format
+landings).
 
 The output is plain text so AI answer engines can ingest it efficiently.
-The list of QR-type landings is sourced from src/lib/qr/landing-content.ts by
-grepping the slug keys (no AST parsing needed for this static structure).
+The list of QR-type landings is sourced from src/lib/qr/landing-content.ts and
+barcode-format landings from src/lib/barcode/landing-content.ts by grepping
+the slug keys (no AST parsing needed for this static structure).
 """
 import os
 import re
@@ -11,13 +13,14 @@ import sys
 
 ROOT = "/home/z/my-project"
 DST = os.path.join(ROOT, "public/llms-full.txt")
-LANDING = os.path.join(ROOT, "src/lib/qr/landing-content.ts")
+QR_LANDING = os.path.join(ROOT, "src/lib/qr/landing-content.ts")
+BC_LANDING = os.path.join(ROOT, "src/lib/barcode/landing-content.ts")
 BRAND_URL = "https://qrandbarcodegenerator.vercel.app"
 
 # Parse slug → primaryKeyword/h1/subtitle by scanning for the slug keys and the
 # fields that follow. This is intentionally simple — the file structure is
 # stable and a small change to its layout is easy to fix here.
-text = open(LANDING).read()
+text = open(QR_LANDING).read()
 
 qr_slugs: list[tuple[str, str, str, str]] = []
 for m in re.finditer(r'"([a-z]+-qr)":\s*\{', text):
@@ -37,6 +40,26 @@ found = {s for s,_,_,_ in qr_slugs}
 missing = expected - found
 if missing:
     print(f"✗ missing slugs: {missing}", file=sys.stderr)
+    sys.exit(1)
+
+# Barcode-format landings (slugs look like "ean-13-barcode").
+bctext = open(BC_LANDING).read()
+
+bc_slugs: list[tuple[str, str, str, str]] = []
+for m in re.finditer(r'"([a-z0-9-]+-barcode)":\s*\{', bctext):
+    slug = m.group(1)
+    block = bctext[m.end(): m.end() + 4000]
+    h1 = re.search(r'h1:\s*"([^"]+)"', block)
+    pk = re.search(r'primaryKeyword:\s*"([^"]+)"', block)
+    sub = re.search(r'subtitle:\s*\n?\s*"([^"]+)"', block)
+    if h1 and pk and sub:
+        bc_slugs.append((slug, pk.group(1), h1.group(1), sub.group(1)))
+
+bc_expected = {"ean-13-barcode", "upc-a-barcode", "code-128-barcode"}
+bc_found = {s for s,_,_,_ in bc_slugs}
+bc_missing = bc_expected - bc_found
+if bc_missing:
+    print(f"✗ missing barcode slugs: {bc_missing}", file=sys.stderr)
     sys.exit(1)
 
 lines: list[str] = []
@@ -59,6 +82,15 @@ lines.append("")
 lines.append("## Per-QR-type generators (12 types)")
 lines.append("")
 for slug, pk, h1, sub in qr_slugs:
+    lines.append(f"### {h1}")
+    lines.append(f"- URL: {BRAND_URL}/{slug}")
+    lines.append(f"- Primary keyword: {pk}")
+    lines.append(f"- Summary: {sub}")
+    lines.append("")
+
+lines.append("## Per-barcode-format generators")
+lines.append("")
+for slug, pk, h1, sub in bc_slugs:
     lines.append(f"### {h1}")
     lines.append(f"- URL: {BRAND_URL}/{slug}")
     lines.append(f"- Primary keyword: {pk}")
@@ -93,4 +125,4 @@ content = "\n".join(lines)
 with open(DST, "w") as f:
     f.write(content)
 
-print(f"✓ wrote {DST} ({os.path.getsize(DST)} bytes, {len(qr_slugs)} QR-type entries)")
+print(f"✓ wrote {DST} ({os.path.getsize(DST)} bytes, {len(qr_slugs)} QR-type + {len(bc_slugs)} barcode-format entries)")

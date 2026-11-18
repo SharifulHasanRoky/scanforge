@@ -66,6 +66,9 @@ Honest, independently presented feature comparison (competitor names belong to t
 - Social Media QR Code Generator: https://qrandbarcodegenerator.vercel.app/social-qr
 - Event QR Code Generator: https://qrandbarcodegenerator.vercel.app/event-qr
 - App Download QR Code Generator: https://qrandbarcodegenerator.vercel.app/app-qr
+- EAN-13 Barcode Generator: https://qrandbarcodegenerator.vercel.app/ean-13-barcode
+- UPC-A Barcode Generator: https://qrandbarcodegenerator.vercel.app/upc-a-barcode
+- Code 128 Barcode Generator: https://qrandbarcodegenerator.vercel.app/code-128-barcode
 - Sitemap: https://qrandbarcodegenerator.vercel.app/sitemap.xml
 - Robots: https://qrandbarcodegenerator.vercel.app/robots.txt
 - LLMs full index: https://qrandbarcodegenerator.vercel.app/llms-full.txt
